@@ -5,6 +5,8 @@ using Discord.Logging;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using TheToymaker.Components;
+using TheToymaker.Data;
+using TheToymaker.Entities;
 using TheToymaker.Utilities;
 using TheToymaker.Utilities.Logging;
 
@@ -28,45 +30,18 @@ namespace TheToymaker
                 driver.BackgroundColor = Color.CornflowerBlue;
                 driver.TimeScale = 1.0f;
                 driver.Graphics = GenerateDeviceManager(driver);
+                driver.TextureBank = new TextureBank().Initialize(driver);
+
                 driver.SpriteBatch = new SpriteBatch(driver.GraphicsDevice);
                 driver.GameCamera = GenerateGameCamera(driver);
-                driver.Sprites = GenerateGameSprites(driver);
+                driver.InterfaceCamera = GenerateGameCamera(driver);
+                driver.GameInterface = GameInterface.Initialize(driver);
                 
                 DebugMonitor.Initialize(driver);
                 driver.Run();
             }
 
             DisposeLogging.Perform();
-        }
-
-        private static List<Sprite> GenerateGameSprites(GameDriver driver)
-        {
-            var textures = new List<Texture2D>();
-            var textureFiles = FindTextureFiles();
-            foreach (var textureFile in textureFiles)
-            {
-                Log.Message($"Loading: Texture: {textureFile}");
-                var filename = Path.GetFileNameWithoutExtension(textureFile);
-                if (string.IsNullOrEmpty(filename))
-                    continue;
-
-                var localPath = Path.Combine("Textures", "Game", filename);
-                var texture = driver.Content.Load<Texture2D>(localPath);
-                if (texture == null)
-                    Log.Error($"Failed: Loading Texture: {textureFile}");
-
-                Log.Message($"Loaded: {texture?.Name}");
-                textures.Add(texture);
-            }
-
-            var sprites = new List<Sprite>();
-            foreach (var texture in textures)
-            {
-                var sprite = GenerateSprite.Default(texture);
-                sprites.Add(sprite);
-            }
-
-            return sprites;
         }
 
         private static List<string> FindTextureFiles()

@@ -4,6 +4,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using TheToymaker.Components;
 using TheToymaker.Data;
+using TheToymaker.Entities;
+using TheToymaker.Extensions;
 using TheToymaker.Systems;
 
 namespace TheToymaker
@@ -17,11 +19,13 @@ namespace TheToymaker
         public float TimeScale;
         public Color BackgroundColor;
         public GraphicsDeviceManager Graphics;
+        public TextureBank TextureBank;
 
         //Game
         public SpriteBatch SpriteBatch;
         public Camera2D GameCamera;
-        public List<Sprite> Sprites;
+        public Camera2D InterfaceCamera;
+        public GameInterface GameInterface;
 
         protected override void Update(GameTime time)
         {
@@ -33,8 +37,10 @@ namespace TheToymaker
             
             ToggleQuitGame.Perform(this);
             ToggleFullscreen.Perform(this);
+            ReloadGameInterface.Perform(this);
 
             GameCamera.Update(GraphicsDevice.Viewport);
+            InterfaceCamera.Update(GraphicsDevice.Viewport);
             DebugMonitor.Update(frameTime);
             base.Update(time);
         }
@@ -42,23 +48,14 @@ namespace TheToymaker
         protected override void Draw(GameTime time)
         {
             GraphicsDevice.Clear(BackgroundColor);
-
             SpriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, GameCamera.Transformation);
-            foreach (var sprite in Sprites)
-            {
-                SpriteBatch.Draw(
-                    sprite.Image,
-                    sprite.Transform.Position,
-                    sprite.Frame,
-                    sprite.Tint,
-                    sprite.Transform.Angle,
-                    sprite.Pivot,
-                    sprite.Transform.Scale,
-                    sprite.Effects,
-                    sprite.Layer);
-            }
 
             SpriteBatch.End();
+
+            SpriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, InterfaceCamera.Transformation);
+            SpriteBatch.DrawSprite(GameInterface.TableTransform, GameInterface.TableSprite);
+            SpriteBatch.End();
+
             DebugMonitor.Draw();
             base.Draw(time);
         }

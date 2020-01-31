@@ -1,7 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 
 namespace TheToymaker.Components
 {
+    [Serializable]
     public class Transform2D
     {
         public Vector2 Position;

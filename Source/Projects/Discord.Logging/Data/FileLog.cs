@@ -10,7 +10,7 @@ namespace Discord.Logging.Data
     {
         public void Send(LogType type, string message)
         {
-            _writer.WriteLineAsync(message);
+            _writer.WriteLine(message);
         }
 
         public void Dispose()

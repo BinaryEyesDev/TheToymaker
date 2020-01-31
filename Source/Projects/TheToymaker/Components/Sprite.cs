@@ -1,13 +1,13 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace TheToymaker.Components
 {
+    [Serializable]
     public class Sprite
     {
-        public Transform2D Transform;
-        public Texture2D Image;
-        public Rectangle? Frame;
+        public string ImageId;
         public Color Tint;
         public float Layer;
         public Vector2 Pivot;
