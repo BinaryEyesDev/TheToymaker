@@ -50,7 +50,7 @@ namespace TheToymaker
         protected override void Draw(GameTime time)
         {
             GraphicsDevice.Clear(BackgroundColor);
-            SpriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, GameCamera.Transformation);
+            SpriteBatch.Begin(SpriteSortMode.FrontToBack, null, null, null, null, null, GameCamera.Transformation);
 
             foreach (var hotspot in HotSpots)
                 SpriteBatch.DrawHotspot(hotspot);
