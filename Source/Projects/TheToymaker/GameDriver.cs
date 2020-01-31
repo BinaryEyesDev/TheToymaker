@@ -1,17 +1,22 @@
 ﻿using System.Collections.Generic;
-using Discord.Logging;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using TheToymaker.Components;
+using TheToymaker.Data;
 
 namespace TheToymaker
 {
     public class GameDriver
         : Game
     {
+        public static GameDriver Instance { get; private set; }
+
+        public float TimeScale;
         public Color BackgroundColor;
         public GraphicsDeviceManager Graphics;
+
+        //Game
         public SpriteBatch SpriteBatch;
         public Camera2D GameCamera;
         public List<Sprite> Sprites;
@@ -23,6 +28,8 @@ namespace TheToymaker
                 Exit();
 
             var elapsed = (float) time.ElapsedGameTime.TotalSeconds;
+            var frameTime = new FrameTime(elapsed, TimeScale);
+
             var keyboardMovementDirection = CalculateMovementDirection(keyState);
             var velocity = keyboardMovementDirection*100.0f;
             GameCamera.Transform.Position += velocity*elapsed;
@@ -61,8 +68,12 @@ namespace TheToymaker
             }
 
             SpriteBatch.End();
-
             base.Draw(time);
+        }
+
+        public GameDriver()
+        {
+            Instance = this;
         }
     }
 }
