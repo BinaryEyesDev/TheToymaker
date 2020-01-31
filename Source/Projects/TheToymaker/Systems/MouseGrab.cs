@@ -7,6 +7,7 @@ namespace TheToymaker.Systems
 {
     public static class MouseGrab
     {
+        public static Transform2D Parent;
         public static Transform2D Grabbed;
 
         public static void Perform(GameDriver driver)
@@ -25,11 +26,17 @@ namespace TheToymaker.Systems
             if (MouseInput.LeftButtonJustReleased)
             {
                 Log.Message("Released: Grabbed");
+                Parent = null;
                 Grabbed = null;
                 return;
             }
 
-            Grabbed.Position = MouseInput.WorldPosition;
+            if (Parent == null)
+                Grabbed.Position = MouseInput.WorldPosition;
+            else
+            {
+                Grabbed.Position = MouseInput.WorldPosition - Parent.Position;
+            }
         }
 
         private static void SearchForGrabbed(GameDriver driver)
@@ -53,10 +60,11 @@ namespace TheToymaker.Systems
                 foreach (var damagePoint in toy.DamagePoints)
                 {
                     var transform = damagePoint.Transform;
-                    if (!IsGrabbed(transform))
+                    if (!IsGrabbed(damagePoint.GetGlobalTransform()))
                         continue;
 
                     Log.Message($"Grabbed: DamagePoint: {damagePoint.Type}");
+                    Parent = driver.GameInterface.ToyLocationInFront;
                     Grabbed = transform;
                 }
             }
