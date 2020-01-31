@@ -3,19 +3,17 @@ using TheToymaker.Data;
 
 namespace TheToymaker.Systems
 {
-    public static class ToggleFullscreen
+    public static class ToggleEditingMode
     {
         public static void Perform(GameDriver driver)
         {
-            if (!KeyInput.JustPressed(Keys.Enter))
+            if (!KeyInput.JustPressed(Keys.E))
                 return;
 
             if (!KeyInput.IsPressed(Keys.LeftAlt))
                 return;
 
-            driver.Fullscreen = !driver.Fullscreen;
-            driver.Graphics.IsFullScreen = driver.Fullscreen;
-            driver.Graphics.ApplyChanges();
+            driver.EditingMode = !driver.EditingMode;
         }
     }
 }

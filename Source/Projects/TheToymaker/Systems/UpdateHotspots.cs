@@ -8,6 +8,9 @@ namespace TheToymaker.Systems
     {
         public static void Perform(GameDriver driver)
         {
+            if (driver.EditingMode)
+                return;
+
             foreach (var hotspot in driver.HotSpots)
             {
                 var transform = hotspot.Transform;

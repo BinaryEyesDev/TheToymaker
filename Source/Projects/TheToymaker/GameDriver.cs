@@ -17,6 +17,7 @@ namespace TheToymaker
         public static GameDriver Instance { get; private set; }
 
         public bool Fullscreen = false;
+        public bool EditingMode = false;
         public float TimeScale;
         public Color BackgroundColor;
         public GraphicsDeviceManager Graphics;
@@ -40,9 +41,11 @@ namespace TheToymaker
 
             ToggleQuitGame.Perform(this);
             ToggleFullscreen.Perform(this);
+            ToggleEditingMode.Perform(this);
             ReloadGameInterface.Perform(this);
             ReloadHotspots.Perform(this);
             ReloadToys.Perform(this);
+            MouseGrab.Perform(this);
             UpdateHotspots.Perform(this);
 
             GameCamera.Update(GraphicsDevice.Viewport);

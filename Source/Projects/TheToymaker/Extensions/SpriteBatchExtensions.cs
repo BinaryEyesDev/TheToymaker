@@ -21,13 +21,7 @@ namespace TheToymaker.Extensions
             batch.DrawSprite(ui.ToyLocationOnTable, toy.LargeSprite);
 
             foreach (var damagePoint in toy.DamagePoints.Where(element => element.Active))
-            {
-                var localPosition = damagePoint.Transform.Position;
-                damagePoint.Transform.Position += ui.ToyLocationInFront.Position;
-                batch.DrawSprite(damagePoint.Transform, damagePoint.Sprite);
-
-                damagePoint.Transform.Position = localPosition;
-            }
+                batch.DrawSprite(damagePoint.GetGlobalTransform(), damagePoint.Sprite);
 
             ui.ToyLocationInFront.Scale = scale;
             ui.ToyLocationOnTable.Scale = scale;

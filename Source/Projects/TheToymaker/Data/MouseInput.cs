@@ -8,6 +8,7 @@ namespace TheToymaker.Data
         public static Vector2 ScreenPosition => _screenPosition;
         public static Vector2 WorldPosition => _worldPosition;
         public static bool LeftButtonJustPressed => _previousLeftButton == ButtonState.Released && _leftButton == ButtonState.Pressed;
+        public static bool LeftButtonJustReleased => _previousLeftButton == ButtonState.Pressed && _leftButton == ButtonState.Released;
         public static bool LeftButtonPressed => _leftButton == ButtonState.Pressed;
         public static bool LeftButtonReleased => _leftButton == ButtonState.Released;
 

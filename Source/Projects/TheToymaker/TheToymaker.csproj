@@ -76,9 +76,11 @@
     <Compile Include="Components\Sprite.cs" />
     <Compile Include="Components\Transform2D.cs" />
     <Compile Include="GameDriver.cs" />
+    <Compile Include="Systems\MouseGrab.cs" />
     <Compile Include="Systems\ReloadGameInterface.cs" />
     <Compile Include="Systems\ReloadHotspots.cs" />
     <Compile Include="Systems\ReloadToys.cs" />
+    <Compile Include="Systems\ToggleEditingMode.cs" />
     <Compile Include="Systems\ToggleFullScreen.cs" />
     <Compile Include="Systems\ToggleQuitGame.cs" />
     <Compile Include="Systems\UpdateHotspots.cs" />
