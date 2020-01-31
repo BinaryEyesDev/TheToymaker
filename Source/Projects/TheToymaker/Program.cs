@@ -11,14 +11,16 @@ using TheToymaker.Utilities.Logging;
 namespace TheToymaker
 {
     /// <summary>
-    ///     Provides the main entry point into the application.
+    /// Provides the main entry point into the application.
     /// </summary>
     public static class Program
     {
+        public static readonly Vector2 TargetResolution = new Vector2(1920.0f, 1080.0f);
+
         public static void Main(string[] args)
         {
             InitializeLogging.Perform();
-
+            
             using (var driver = new GameDriver())
             {
                 driver.IsMouseVisible = true;
@@ -28,8 +30,8 @@ namespace TheToymaker
                 driver.SpriteBatch = new SpriteBatch(driver.GraphicsDevice);
                 driver.GameCamera = GenerateGameCamera(driver);
                 driver.Sprites = GenerateGameSprites(driver);
-
-                driver.Window.Title = "The Toymaker";
+                
+                DebugMonitor.Initialize(driver);
                 driver.Run();
             }
 
@@ -47,7 +49,7 @@ namespace TheToymaker
                 if (string.IsNullOrEmpty(filename))
                     continue;
 
-                var localPath = Path.Combine("Textures", filename);
+                var localPath = Path.Combine("Textures", "Game", filename);
                 var texture = driver.Content.Load<Texture2D>(localPath);
                 if (texture == null)
                     Log.Error($"Failed: Loading Texture: {textureFile}");
@@ -70,16 +72,15 @@ namespace TheToymaker
         {
             var directory = Directory.GetCurrentDirectory();
             var contentFolder = Path.Combine(directory, "Content");
-            var texturesFolder = Path.Combine(contentFolder, "Textures");
+            var texturesFolder = Path.Combine(contentFolder, "Textures", "Game");
             return Directory.GetFiles(texturesFolder).ToList();
         }
 
         private static Camera2D GenerateGameCamera(GameDriver driver)
         {
             var viewport = driver.GraphicsDevice.Viewport;
-            var targetResolution = new Vector2(1920.0f, 1080.0f);
-            var currentResolution = new Vector2(viewport.Width, viewport.Height);
-            var ratio = new Vector2(currentResolution.X/ targetResolution.X, currentResolution.Y/ targetResolution.Y);
+            var (width, height) = new Vector2(viewport.Width, viewport.Height);
+            var ratio = new Vector2(width/TargetResolution.X, height/TargetResolution.Y);
 
             var transform = Transform2D.Identity;
             transform.Scale = ratio;

@@ -12,6 +12,7 @@ namespace TheToymaker
     {
         public static GameDriver Instance { get; private set; }
 
+        public bool Fullscreen = false;
         public float TimeScale;
         public Color BackgroundColor;
         public GraphicsDeviceManager Graphics;
@@ -30,22 +31,9 @@ namespace TheToymaker
             var elapsed = (float) time.ElapsedGameTime.TotalSeconds;
             var frameTime = new FrameTime(elapsed, TimeScale);
 
-            var keyboardMovementDirection = CalculateMovementDirection(keyState);
-            var velocity = keyboardMovementDirection*100.0f;
-            GameCamera.Transform.Position += velocity*elapsed;
             GameCamera.Update(GraphicsDevice.Viewport);
+            DebugMonitor.Update(frameTime);
             base.Update(time);
-        }
-
-        private static Vector2 CalculateMovementDirection(KeyboardState keyState)
-        {
-            var direction = new Vector2(0.0f, 0.0f);
-            direction.X += keyState.IsKeyDown(Keys.Left) ? -1.0f : 0.0f;
-            direction.X += keyState.IsKeyDown(Keys.Right) ? +1.0f : 0.0f;
-            direction.Y += keyState.IsKeyDown(Keys.Down) ? -1.0f : 0.0f;
-            direction.Y += keyState.IsKeyDown(Keys.Up) ? +1.0f : 0.0f;
-
-            return direction;
         }
 
         protected override void Draw(GameTime time)
@@ -68,6 +56,7 @@ namespace TheToymaker
             }
 
             SpriteBatch.End();
+            DebugMonitor.Draw();
             base.Draw(time);
         }
 

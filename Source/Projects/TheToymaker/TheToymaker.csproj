@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\DebugMonitor.cs" />
     <Compile Include="Data\FrameTime.cs" />
     <Compile Include="GameSystem.cs" />
     <Compile Include="Program.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Components\Sprite.cs" />
     <Compile Include="Components\Transform2D.cs" />
     <Compile Include="GameDriver.cs" />
+    <Compile Include="Utilities\CalculateKeyboardDirection.cs" />
     <Compile Include="Utilities\GenerateSprite.cs" />
     <Compile Include="Utilities\GetRandom.cs" />
     <Compile Include="Utilities\Logging\DisposeLogging.cs" />
