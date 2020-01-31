@@ -26,15 +26,17 @@ namespace TheToymaker
         public Camera2D GameCamera;
         public Camera2D InterfaceCamera;
         public GameInterface GameInterface;
+        public List<HotSpot> HotSpots;
 
         protected override void Update(GameTime time)
         {
             var elapsed = (float)time.ElapsedGameTime.TotalSeconds;
             var frameTime = new FrameTime(elapsed, TimeScale);
-
+            
             var keyState = Keyboard.GetState();
             KeyInput.Update(keyState);
-            
+            MouseInput.Update();
+
             ToggleQuitGame.Perform(this);
             ToggleFullscreen.Perform(this);
             ReloadGameInterface.Perform(this);

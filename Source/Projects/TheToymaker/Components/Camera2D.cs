@@ -12,10 +12,11 @@ namespace TheToymaker.Components
         {
             var positionOffset = new Vector3(-Transform.Position.X, -Transform.Position.Y, 0.0f);
             var viewportOffset = new Vector3(viewport.Width*0.5f, viewport.Height*0.5f, 0.0f);
+            var radianAngle = MathHelper.ToRadians(Transform.Angle);
 
             var positionTranslation = Matrix.CreateTranslation(positionOffset);
-            var rotation = Matrix.CreateRotationZ(Transform.Angle);
-            var scale = Matrix.CreateScale(Transform.Scale.X, Transform.Scale.Y, 0.0f);
+            var rotation = Matrix.CreateRotationZ(radianAngle);
+            var scale = Matrix.CreateScale(Transform.Scale.X, Transform.Scale.Y, 1.0f);
             var viewportTranslation = Matrix.CreateTranslation(viewportOffset);
 
             Transformation = positionTranslation*rotation*scale*viewportTranslation;

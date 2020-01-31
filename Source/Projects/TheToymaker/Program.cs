@@ -36,7 +36,8 @@ namespace TheToymaker
                 driver.GameCamera = GenerateGameCamera(driver);
                 driver.InterfaceCamera = GenerateGameCamera(driver);
                 driver.GameInterface = GameInterface.Initialize(driver);
-                
+                driver.HotSpots = LoadHotSpots.Perform(driver);
+
                 DebugMonitor.Initialize(driver);
                 driver.Run();
             }

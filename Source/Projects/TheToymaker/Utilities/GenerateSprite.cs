@@ -6,7 +6,7 @@ namespace TheToymaker.Utilities
 {
     public static class GenerateSprite
     {
-        public static Sprite Default(Texture2D texture)
+        public static Sprite Default()
         {
             return new Sprite
             {
