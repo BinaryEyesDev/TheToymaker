@@ -57,6 +57,8 @@ namespace TheToymaker
                 SpriteBatch.DrawHotspot(hotspot);
 
             SpriteBatch.DrawSprite(GameInterface.TableTransform, GameInterface.TableSprite);
+            SpriteBatch.DrawSprite(GameInterface.ToyLocationOnTable, GameInterface.Square);
+            SpriteBatch.DrawSprite(GameInterface.ToyLocationInFront, GameInterface.Square);
             SpriteBatch.End();
 
             DebugMonitor.Draw();

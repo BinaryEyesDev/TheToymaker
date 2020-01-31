@@ -10,6 +10,10 @@ namespace TheToymaker.Entities
     {
         public Sprite TableSprite;
         public Transform2D TableTransform;
+        
+        public Sprite Square;
+        public Transform2D ToyLocationOnTable;
+        public Transform2D ToyLocationInFront;
 
         public static GameInterface Initialize(GameDriver driver)
         {
