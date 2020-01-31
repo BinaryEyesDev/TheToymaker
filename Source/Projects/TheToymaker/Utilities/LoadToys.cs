@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using TheToymaker.Entities;
-using TheToymaker.Utilities.Testing;
 
 namespace TheToymaker.Utilities
 {
@@ -8,7 +8,17 @@ namespace TheToymaker.Utilities
     {
         public static List<Toy> Perform(GameDriver driver)
         {
-            return new List<Toy>();
+            var toysFolder = DataPath.Get("Toys");
+            var toyFiles = Directory.GetFiles(toysFolder);
+
+            var toys = new List<Toy>();
+            foreach (var toyFile in toyFiles)
+            {
+                var toy = JsonData.DeserializeFromFile<Toy>(toyFile);
+                toys.Add(toy);
+            }
+
+            return toys;
         }
     }
 }

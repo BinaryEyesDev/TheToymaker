@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -55,6 +56,9 @@ namespace TheToymaker
 
             foreach (var hotspot in HotSpots)
                 SpriteBatch.DrawHotspot(hotspot);
+
+            foreach (var toy in Toys.Where(element => element.Active))
+                SpriteBatch.DrawToy(toy);
 
             SpriteBatch.DrawSprite(GameInterface.TableTransform, GameInterface.TableSprite);
             SpriteBatch.DrawSprite(GameInterface.ToyLocationOnTable, GameInterface.Square);

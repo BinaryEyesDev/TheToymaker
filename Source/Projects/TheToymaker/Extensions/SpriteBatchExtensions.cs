@@ -1,12 +1,29 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using TheToymaker.Components;
 using TheToymaker.Data;
+using TheToymaker.Entities;
 
 namespace TheToymaker.Extensions
 {
     public static class SpriteBatchExtensions
     {
+        public static void DrawToy(this SpriteBatch batch, Toy toy)
+        {
+            var ui = GameDriver.Instance.GameInterface;
+            var scale = ui.ToyLocationInFront.Scale;
+
+            ui.ToyLocationInFront.Scale = new Vector2(1.0f, 1.0f);
+            batch.DrawSprite(ui.ToyLocationInFront, toy.LargeSprite);
+
+            ui.ToyLocationOnTable.Scale = new Vector2(0.3f, 0.3f);
+            batch.DrawSprite(ui.ToyLocationOnTable, toy.LargeSprite);
+
+            ui.ToyLocationInFront.Scale = scale;
+            ui.ToyLocationOnTable.Scale = scale;
+        }
+        
         public static void DrawHotspot(this SpriteBatch batch, HotSpot spot)
         {
             var sprite = !string.IsNullOrEmpty(spot.Sprite.ImageId) ? spot.Sprite : spot.DebugSprite;
@@ -24,7 +41,7 @@ namespace TheToymaker.Extensions
                 transform.Position,
                 textureFrame,
                 sprite.Tint,
-                transform.Angle,
+                MathHelper.ToRadians(transform.Angle),
                 texturePivot,
                 transform.Scale,
                 sprite.Effects,
