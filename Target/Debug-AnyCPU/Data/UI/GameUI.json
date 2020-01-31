@@ -1,0 +1,41 @@
+{
+  "TableSprite": {
+    "ImageId": "UI_Desk",
+    "Tint": {
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 255
+    },
+    "Layer": 0.1,
+    "Pivot": "0.5, 0.5",
+    "Effects": 0
+  },
+  "Square": {
+    "ImageId": "Square",
+    "Tint": {
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 80
+    },
+    "Layer": 0.2,
+    "Pivot": "0.5, 0.5",
+    "Effects": 0
+  },
+  "TableTransform": {
+    "Position": "-300, 110",
+    "Scale": "0.8, 0.8",
+    "Angle": 0.0
+  },
+  "ToyLocationOnTable": {
+    "Position": "-350, 320",
+    "Scale": "5.0, 5.0",
+    "Angle": 50.0
+  },
+  "ToyLocationInFront": {
+    "Position": "450, 0",
+    "Scale": "5.0, 5.0",
+    "Angle": 0.0
+  }
+}

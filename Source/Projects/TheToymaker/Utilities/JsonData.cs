@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.IO;
+using System.Text;
 using Discord.Logging;
 using Newtonsoft.Json;
 
@@ -22,7 +23,7 @@ namespace TheToymaker.Utilities
             Log.Debug($"Saving: {path}");
             var json = JsonConvert.SerializeObject(input, Formatting.Indented);
             using (var writer = new StreamWriter(path))
-                writer.Write(json);
+                writer.Write(json); 
 
             return input;
         }

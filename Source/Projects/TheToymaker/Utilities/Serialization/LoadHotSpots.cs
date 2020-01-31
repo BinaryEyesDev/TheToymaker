@@ -17,6 +17,7 @@ namespace TheToymaker.Utilities
             foreach (var hotspotFile in hotspotFiles)
             {
                 var hotspot = JsonData.DeserializeFromFile<HotSpot>(hotspotFile);
+                hotspot.Name = Path.GetFileNameWithoutExtension(hotspotFile);
                 hotspots.Add(hotspot);
             }
 

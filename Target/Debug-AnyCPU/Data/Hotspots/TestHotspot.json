@@ -1,0 +1,35 @@
+{
+  "Transform": {
+    "Position": "100, 250",
+    "Scale": "100, 100",
+    "Angle": 0.0
+  },
+  "DebugSprite": {
+    "ImageId": "Square",
+    "Tint": {
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 128
+    },
+    "Layer": 0.5,
+    "Pivot": "0.5, 0.5",
+    "Effects": 0
+  },
+  "Sprite": {
+    "ImageId": "",
+    "Tint": {
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 255
+    },
+    "Layer": 0.5,
+    "Pivot": "0.5, 0.5",
+    "Effects": 0
+  },
+  "BoundingBox": {
+    "Min": "-0.5, -0.5, 0",
+    "Max": "0.5, 0.5, 0"
+  }
+}

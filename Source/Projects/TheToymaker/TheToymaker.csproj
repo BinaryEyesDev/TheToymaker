@@ -79,7 +79,7 @@
     <Compile Include="Systems\MouseGrab.cs" />
     <Compile Include="Systems\ReloadGameInterface.cs" />
     <Compile Include="Systems\ReloadHotspots.cs" />
-    <Compile Include="Systems\ReloadToys.cs" />
+    <Compile Include="Systems\UpdateToys.cs" />
     <Compile Include="Systems\ToggleEditingMode.cs" />
     <Compile Include="Systems\ToggleFullScreen.cs" />
     <Compile Include="Systems\ToggleQuitGame.cs" />
@@ -88,11 +88,12 @@
     <Compile Include="Utilities\DataPath.cs" />
     <Compile Include="Utilities\GenerateEnumList.cs" />
     <Compile Include="Utilities\GenerateSprite.cs" />
-    <Compile Include="Utilities\LoadToys.cs" />
+    <Compile Include="Utilities\Serialization\LoadToys.cs" />
+    <Compile Include="Utilities\Serialization\SaveToys.cs" />
     <Compile Include="Utilities\Testing\GenerateTestHotspot.cs" />
     <Compile Include="Utilities\GetRandom.cs" />
     <Compile Include="Utilities\JsonData.cs" />
-    <Compile Include="Utilities\LoadHotSpots.cs" />
+    <Compile Include="Utilities\Serialization\LoadHotSpots.cs" />
     <Compile Include="Utilities\Logging\DisposeLogging.cs" />
     <Compile Include="Utilities\Logging\InitializeLogging.cs" />
     <Compile Include="Utilities\Testing\GenerateTestToy.cs" />

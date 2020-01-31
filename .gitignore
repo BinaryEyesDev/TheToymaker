@@ -1,5 +1,4 @@
 Temp
-Target
 Source/Packages
 obj
 bin
@@ -9,3 +8,9 @@ temp
 _ReSharper*.*
 *.user
 *.orig
+*.dll
+*.pdb
+*.exe
+*.log
+*.xml
+*.xnb
