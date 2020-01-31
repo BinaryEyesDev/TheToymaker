@@ -78,6 +78,7 @@
     <Compile Include="Systems\ReloadHotspots.cs" />
     <Compile Include="Systems\ToggleFullScreen.cs" />
     <Compile Include="Systems\ToggleQuitGame.cs" />
+    <Compile Include="Systems\UpdateHotspots.cs" />
     <Compile Include="Utilities\CalculateKeyboardDirection.cs" />
     <Compile Include="Utilities\DataPath.cs" />
     <Compile Include="Utilities\GenerateEnumList.cs" />

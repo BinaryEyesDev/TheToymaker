@@ -25,12 +25,7 @@ namespace TheToymaker.Components
             _spriteBatch.Begin();
             _spriteBatch.DrawString(_font, $"TimeScale: {GameDriver.Instance.TimeScale}", new Vector2(10.0f, 10.0f), Color.White);
             _spriteBatch.DrawString(_font, $"Mouse Screen Position: {MouseInput.ScreenPosition}", new Vector2(10.0f, 30.0f), Color.White);
-
-            var screenPosition = MouseInput.ScreenPosition;
-            var camera = GameDriver.Instance.GameCamera;
-            var invertTransformation = Matrix.Invert(camera.Transformation);
-            var worldPosition = Vector2.Transform(screenPosition, invertTransformation);
-            _spriteBatch.DrawString(_font, $"Mouse World Position: {worldPosition}", new Vector2(10.0f, 50.0f), Color.White);
+            _spriteBatch.DrawString(_font, $"Mouse World Position: {MouseInput.WorldPosition}", new Vector2(10.0f, 50.0f), Color.White);
 
             _spriteBatch.End();
         }
