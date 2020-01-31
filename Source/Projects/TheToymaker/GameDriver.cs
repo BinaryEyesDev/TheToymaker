@@ -24,7 +24,6 @@ namespace TheToymaker
         //Game
         public SpriteBatch SpriteBatch;
         public Camera2D GameCamera;
-        public Camera2D InterfaceCamera;
         public GameInterface GameInterface;
         public List<HotSpot> HotSpots;
 
@@ -40,9 +39,10 @@ namespace TheToymaker
             ToggleQuitGame.Perform(this);
             ToggleFullscreen.Perform(this);
             ReloadGameInterface.Perform(this);
+            ReloadHotspots.Perform(this);
+            //UpdateHotspots.Perform(this);
 
             GameCamera.Update(GraphicsDevice.Viewport);
-            InterfaceCamera.Update(GraphicsDevice.Viewport);
             DebugMonitor.Update(frameTime);
             base.Update(time);
         }
@@ -52,9 +52,9 @@ namespace TheToymaker
             GraphicsDevice.Clear(BackgroundColor);
             SpriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, GameCamera.Transformation);
 
-            SpriteBatch.End();
+            foreach (var hotspot in HotSpots)
+                SpriteBatch.DrawHotspot(hotspot);
 
-            SpriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, InterfaceCamera.Transformation);
             SpriteBatch.DrawSprite(GameInterface.TableTransform, GameInterface.TableSprite);
             SpriteBatch.End();
 

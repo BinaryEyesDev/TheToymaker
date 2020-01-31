@@ -75,12 +75,14 @@
     <Compile Include="Components\Transform2D.cs" />
     <Compile Include="GameDriver.cs" />
     <Compile Include="Systems\ReloadGameInterface.cs" />
+    <Compile Include="Systems\ReloadHotspots.cs" />
     <Compile Include="Systems\ToggleFullScreen.cs" />
     <Compile Include="Systems\ToggleQuitGame.cs" />
     <Compile Include="Utilities\CalculateKeyboardDirection.cs" />
     <Compile Include="Utilities\DataPath.cs" />
     <Compile Include="Utilities\GenerateEnumList.cs" />
     <Compile Include="Utilities\GenerateSprite.cs" />
+    <Compile Include="Utilities\GenerateTestHotspot.cs" />
     <Compile Include="Utilities\GetRandom.cs" />
     <Compile Include="Utilities\JsonData.cs" />
     <Compile Include="Utilities\LoadHotSpots.cs" />

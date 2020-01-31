@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
-using TheToymaker.Components;
+using System.IO;
+using Discord.Logging;
 using TheToymaker.Data;
 
 namespace TheToymaker.Utilities
@@ -8,16 +9,17 @@ namespace TheToymaker.Utilities
     {
         public static List<HotSpot> Perform(GameDriver driver)
         {
-            var hotspot = new HotSpot
-            {
-                Name = "Hotspot",
-                Sprite = GenerateSprite.Default(),
-                DebugSprite = GenerateSprite.Default(),
-                Transform = Transform2D.Identity
-            };
-            JsonData.SerializeToFile(hotspot, DataPath.Get("Hotspot.json"));
+            var hotspotFolder = DataPath.Get("Hotspots");
+            var hotspotFiles = Directory.GetFiles(hotspotFolder);
+            Log.Message($"Found {hotspotFiles.Length} Hotspot Files");
 
             var hotspots = new List<HotSpot>();
+            foreach (var hotspotFile in hotspotFiles)
+            {
+                var hotspot = JsonData.DeserializeFromFile<HotSpot>(hotspotFile);
+                hotspots.Add(hotspot);
+            }
+
             return hotspots;
         }
     }
