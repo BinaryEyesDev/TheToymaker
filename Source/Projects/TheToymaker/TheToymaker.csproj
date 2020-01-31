@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\DebugMonitor.cs" />
+    <Compile Include="Components\ToyDamagePoint.cs" />
     <Compile Include="Data\FrameInput.cs" />
     <Compile Include="Data\FrameTime.cs" />
     <Compile Include="Data\HotSpot.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Data\TextureBank.cs" />
     <Compile Include="Entities\GameInterface.cs" />
     <Compile Include="Entities\Table.cs" />
+    <Compile Include="Entities\Toy.cs" />
     <Compile Include="Extensions\SpriteBatchExtensions.cs" />
     <Compile Include="GameSystem.cs" />
     <Compile Include="Program.cs" />
@@ -83,12 +85,14 @@
     <Compile Include="Utilities\DataPath.cs" />
     <Compile Include="Utilities\GenerateEnumList.cs" />
     <Compile Include="Utilities\GenerateSprite.cs" />
-    <Compile Include="Utilities\GenerateTestHotspot.cs" />
+    <Compile Include="Utilities\LoadToys.cs" />
+    <Compile Include="Utilities\Testing\GenerateTestHotspot.cs" />
     <Compile Include="Utilities\GetRandom.cs" />
     <Compile Include="Utilities\JsonData.cs" />
     <Compile Include="Utilities\LoadHotSpots.cs" />
     <Compile Include="Utilities\Logging\DisposeLogging.cs" />
     <Compile Include="Utilities\Logging\InitializeLogging.cs" />
+    <Compile Include="Utilities\Testing\GenerateTestToy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

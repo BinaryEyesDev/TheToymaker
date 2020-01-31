@@ -1,7 +1,7 @@
 ﻿using TheToymaker.Components;
 using TheToymaker.Data;
 
-namespace TheToymaker.Utilities
+namespace TheToymaker.Utilities.Testing
 {
     public static class GenerateTestHotspot
     {

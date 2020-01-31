@@ -13,6 +13,7 @@ namespace TheToymaker.Utilities
                 ImageId = "",
                 Tint = Color.White,
                 Layer = 0.5f,
+                Pivot = new Vector2(0.5f, 0.5f),
                 Effects = SpriteEffects.None,
             };
         }

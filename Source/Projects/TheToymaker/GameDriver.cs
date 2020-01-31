@@ -26,6 +26,7 @@ namespace TheToymaker
         public Camera2D GameCamera;
         public GameInterface GameInterface;
         public List<HotSpot> HotSpots;
+        public List<Toy> Toys;
 
         protected override void Update(GameTime time)
         {
