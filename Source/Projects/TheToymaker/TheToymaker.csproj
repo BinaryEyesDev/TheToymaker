@@ -55,8 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Components\Camera2D.cs" />
+    <Compile Include="Components\Sprite.cs" />
+    <Compile Include="Components\Transform2D.cs" />
     <Compile Include="GameDriver.cs" />
+    <Compile Include="Utilities\GenerateSprite.cs" />
     <Compile Include="Utilities\Logging\DisposeLogging.cs" />
     <Compile Include="Utilities\Logging\InitializeLogging.cs" />
   </ItemGroup>
@@ -69,6 +73,7 @@
       <Name>Discord.Logging</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(SolutionDir)Targets\ConfigurationProperties.targets" />
   <Import Project="$(SolutionDir)Targets\OutputDirectories.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
