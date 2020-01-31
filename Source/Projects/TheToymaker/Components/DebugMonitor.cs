@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using TheToymaker.Data;
 
 namespace TheToymaker.Components
@@ -19,7 +20,10 @@ namespace TheToymaker.Components
 
         public static void Draw()
         {
+            _spriteBatch.Begin();
+            _spriteBatch.DrawString(_font, $"TimeScale: {GameDriver.Instance.TimeScale}", new Vector2(10.0f, 10.0f), Color.White);
 
+            _spriteBatch.End();
         }
 
         private static SpriteFont _font;

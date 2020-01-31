@@ -26,6 +26,7 @@ namespace TheToymaker
                 driver.IsMouseVisible = true;
                 driver.Content.RootDirectory = "Content";
                 driver.BackgroundColor = Color.CornflowerBlue;
+                driver.TimeScale = 1.0f;
                 driver.Graphics = GenerateDeviceManager(driver);
                 driver.SpriteBatch = new SpriteBatch(driver.GraphicsDevice);
                 driver.GameCamera = GenerateGameCamera(driver);

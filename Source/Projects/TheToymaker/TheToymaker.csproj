@@ -18,6 +18,9 @@
     <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\lib\net45\MonoGame.Framework.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="SharpDX, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
       <HintPath>..\..\packages\SharpDX.4.0.1\lib\net45\SharpDX.dll</HintPath>
     </Reference>
@@ -56,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\DebugMonitor.cs" />
+    <Compile Include="Data\FrameInput.cs" />
     <Compile Include="Data\FrameTime.cs" />
     <Compile Include="GameSystem.cs" />
     <Compile Include="Program.cs" />
@@ -63,7 +67,10 @@
     <Compile Include="Components\Sprite.cs" />
     <Compile Include="Components\Transform2D.cs" />
     <Compile Include="GameDriver.cs" />
+    <Compile Include="Systems\ToggleFullScreen.cs" />
+    <Compile Include="Systems\ToggleQuitGame.cs" />
     <Compile Include="Utilities\CalculateKeyboardDirection.cs" />
+    <Compile Include="Utilities\GenerateEnumList.cs" />
     <Compile Include="Utilities\GenerateSprite.cs" />
     <Compile Include="Utilities\GetRandom.cs" />
     <Compile Include="Utilities\Logging\DisposeLogging.cs" />

@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using TheToymaker.Components;
 using TheToymaker.Data;
+using TheToymaker.Systems;
 
 namespace TheToymaker
 {
@@ -24,12 +25,14 @@ namespace TheToymaker
 
         protected override void Update(GameTime time)
         {
-            var keyState = Keyboard.GetState();
-            if (keyState.IsKeyDown(Keys.Escape))
-                Exit();
-
-            var elapsed = (float) time.ElapsedGameTime.TotalSeconds;
+            var elapsed = (float)time.ElapsedGameTime.TotalSeconds;
             var frameTime = new FrameTime(elapsed, TimeScale);
+
+            var keyState = Keyboard.GetState();
+            KeyInput.Update(keyState);
+            
+            ToggleQuitGame.Perform(this);
+            ToggleFullscreen.Perform(this);
 
             GameCamera.Update(GraphicsDevice.Viewport);
             DebugMonitor.Update(frameTime);
