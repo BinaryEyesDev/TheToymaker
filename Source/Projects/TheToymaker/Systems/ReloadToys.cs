@@ -4,14 +4,14 @@ using TheToymaker.Utilities;
 
 namespace TheToymaker.Systems
 {
-    public static class ReloadHotspots
+    public static class ReloadToys
     {
         public static void Perform(GameDriver driver)
         {
-            if (!KeyInput.JustPressed(Keys.F2))
+            if (!KeyInput.JustPressed(Keys.F3))
                 return;
 
-            driver.HotSpots = LoadHotSpots.Perform(driver);
+            driver.Toys = LoadToys.Perform(driver);
         }
     }
 }

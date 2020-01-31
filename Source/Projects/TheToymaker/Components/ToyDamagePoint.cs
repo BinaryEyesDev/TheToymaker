@@ -7,6 +7,7 @@ namespace TheToymaker.Components
     {
         public bool Active;
         public string Type;
+        public Transform2D Transform;
         public Sprite Sprite;
     }
 }

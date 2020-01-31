@@ -42,6 +42,7 @@ namespace TheToymaker
             ToggleFullscreen.Perform(this);
             ReloadGameInterface.Perform(this);
             ReloadHotspots.Perform(this);
+            ReloadToys.Perform(this);
             UpdateHotspots.Perform(this);
 
             GameCamera.Update(GraphicsDevice.Viewport);

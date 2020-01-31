@@ -78,6 +78,7 @@
     <Compile Include="GameDriver.cs" />
     <Compile Include="Systems\ReloadGameInterface.cs" />
     <Compile Include="Systems\ReloadHotspots.cs" />
+    <Compile Include="Systems\ReloadToys.cs" />
     <Compile Include="Systems\ToggleFullScreen.cs" />
     <Compile Include="Systems\ToggleQuitGame.cs" />
     <Compile Include="Systems\UpdateHotspots.cs" />

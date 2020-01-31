@@ -32,7 +32,7 @@
 /processorParam:TextureFormat=Color
 /build:Textures/Debug/WhiteSquare.png
 
-#begin Textures/Game/Cuts_Doll_Fabric_001.png
+#begin Textures/Game/Cuts_Doll_Fabric_001a.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -42,9 +42,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/Game/Cuts_Doll_Fabric_001.png
+/build:Textures/Game/Cuts_Doll_Fabric_001a.png
 
-#begin Textures/Game/Doll_Fabric_000.png
+#begin Textures/Game/Cuts_Doll_Fabric_001b.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -54,9 +54,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/Game/Doll_Fabric_000.png
+/build:Textures/Game/Cuts_Doll_Fabric_001b.png
 
-#begin Textures/Game/Doll_Fabric_000.png
+#begin Textures/Game/Cuts_Doll_Fabric_001c.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -66,7 +66,19 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/Game/Doll_Fabric_000.png
+/build:Textures/Game/Cuts_Doll_Fabric_001c.png
+
+#begin Textures/Game/Cuts_Doll_Fabric_001d.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Cuts_Doll_Fabric_001d.png
 
 #begin Textures/Game/Doll_Fabric_001.png
 /importer:TextureImporter
@@ -80,7 +92,7 @@
 /processorParam:TextureFormat=Color
 /build:Textures/Game/Doll_Fabric_001.png
 
-#begin Textures/Game/Table_Wood_000.png
+#begin Textures/Game/Nail_Doll_Fabric_001a.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -90,7 +102,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/Game/Table_Wood_000.png
+/build:Textures/Game/Nail_Doll_Fabric_001a.png
 
 #begin Textures/Game/Table_Wood_000.png
 /importer:TextureImporter
