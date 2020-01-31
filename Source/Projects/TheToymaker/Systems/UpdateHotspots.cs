@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Discord.Logging;
+using Microsoft.Xna.Framework;
 using TheToymaker.Data;
 
 namespace TheToymaker.Systems
@@ -19,11 +20,11 @@ namespace TheToymaker.Systems
 
                 var worldPosition = new Vector3(MouseInput.WorldPosition.X, MouseInput.WorldPosition.Y, 0.0f);
                 var containmentType = boundingBox.Contains(worldPosition);
-                var tint = containmentType == ContainmentType.Contains
-                    ? new Color(Color.Green, 0.25f)
-                    : new Color(Color.Gray, 0.25f);
+                var containsMouse = containmentType == ContainmentType.Contains;
+                hotspot.DebugSprite.Tint = containsMouse ? new Color(0.1f, 1.0f, 0.1f, 0.25f)  : new Color(1.0f, 1.0f, 1.0f, 0.25f);
 
-                hotspot.DebugSprite.Tint = tint;
+                if (MouseInput.LeftButtonJustPressed && containsMouse)
+                    Log.Debug($"Hotspot Pressed: {hotspot.Name}");
             }
         }
     }
