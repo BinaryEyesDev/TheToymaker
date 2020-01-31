@@ -1,0 +1,11 @@
+Temp
+Target
+Source/Packages
+obj
+bin
+temp
+.vs
+
+_ReSharper*.*
+*.user
+*.orig
