@@ -8,8 +8,10 @@ namespace TheToymaker.Entities
     public class Toy
     {
         public bool Active;
-        public string Name { get; set; }
         public Sprite LargeSprite;
         public List<ToyDamagePoint> DamagePoints;
+
+        [NonSerialized]
+        public string Name;
     }
 }

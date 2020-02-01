@@ -17,8 +17,8 @@ namespace TheToymaker.Systems
                 var scale = new Vector3(transform.Scale.X, transform.Scale.Y, 1.0f);
                 var position = new Vector3(transform.Position.X, transform.Position.Y, 0.0f);
 
-                var boundingMin = Vector3.Multiply(hotspot.BoundingBox.Min, scale) + position;
-                var boundingMax = Vector3.Multiply(hotspot.BoundingBox.Max, scale) + position;
+                var boundingMin = hotspot.BoundingBox.Min + position;
+                var boundingMax = hotspot.BoundingBox.Max + position;
                 var boundingBox = new BoundingBox(boundingMin, boundingMax);
 
                 var worldPosition = new Vector3(MouseInput.WorldPosition.X, MouseInput.WorldPosition.Y, 0.0f);

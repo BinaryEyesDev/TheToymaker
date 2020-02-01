@@ -1,7 +1,7 @@
 {
   "Transform": {
-    "Position": "106.499977, 387",
-    "Scale": "1, 1",
+    "Position": "-817.499939, 115.500008",
+    "Scale": "0.5, 0.5",
     "Angle": 0.0
   },
   "DebugSprite": {
@@ -12,12 +12,12 @@
       "R": 255,
       "A": 63
     },
-    "Layer": 0.5,
+    "Layer": 0.9,
     "Pivot": "0.5, 0.5",
     "Effects": 0
   },
   "Sprite": {
-    "ImageId": "",
+    "ImageId": "Clock_Small_000",
     "Tint": {
       "B": 255,
       "G": 255,
@@ -29,7 +29,7 @@
     "Effects": 0
   },
   "BoundingBox": {
-    "Min": "-50, -50, 0",
-    "Max": "50, 50, 0"
+    "Min": "-70, -130, 0",
+    "Max": "70, 130, 0"
   }
 }

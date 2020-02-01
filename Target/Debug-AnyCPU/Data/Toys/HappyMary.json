@@ -16,10 +16,19 @@
     {
       "Active": true,
       "Type": "BurstSeam",
-      "Transform": {"Position": "-78, 210", "Scale": "1.0, 1.0", "Angle": 0.0},
+      "Transform": {
+        "Position": "-78, 210",
+        "Scale": "1, 1",
+        "Angle": 0.0
+      },
       "Sprite": {
         "ImageId": "Cuts_Doll_Fabric_001a",
-        "Tint": {"B": 255,"G": 255,"R": 255,"A": 255},
+        "Tint": {
+          "B": 255,
+          "G": 255,
+          "R": 255,
+          "A": 255
+        },
         "Layer": 0.6,
         "Pivot": "0.5, 0.5",
         "Effects": 0
@@ -28,10 +37,19 @@
     {
       "Active": true,
       "Type": "BurstSeam",
-      "Transform": {"Position": "213, -45", "Scale": "1.0, 1.0", "Angle": 0.0},
+      "Transform": {
+        "Position": "213, -45",
+        "Scale": "1, 1",
+        "Angle": 0.0
+      },
       "Sprite": {
         "ImageId": "Cuts_Doll_Fabric_001b",
-        "Tint": {"B": 255,"G": 255,"R": 255,"A": 255},
+        "Tint": {
+          "B": 255,
+          "G": 255,
+          "R": 255,
+          "A": 255
+        },
         "Layer": 0.6,
         "Pivot": "0.5, 0.5",
         "Effects": 0
@@ -40,10 +58,19 @@
     {
       "Active": true,
       "Type": "BurstSeam",
-      "Transform": {"Position": "-10, -320", "Scale": "1.0, 1.0", "Angle": 0.0},
+      "Transform": {
+        "Position": "-10, -320",
+        "Scale": "1, 1",
+        "Angle": 0.0
+      },
       "Sprite": {
         "ImageId": "Cuts_Doll_Fabric_001c",
-        "Tint": {"B": 255,"G": 255,"R": 255,"A": 255},
+        "Tint": {
+          "B": 255,
+          "G": 255,
+          "R": 255,
+          "A": 255
+        },
         "Layer": 0.6,
         "Pivot": "0.5, 0.5",
         "Effects": 0
@@ -52,10 +79,19 @@
     {
       "Active": true,
       "Type": "BurstSeam",
-      "Transform": {"Position": "65, -360", "Scale": "1.0, 1.0", "Angle": 0.0},
+      "Transform": {
+        "Position": "61.49994, -346.499969",
+        "Scale": "1, 1",
+        "Angle": 0.0
+      },
       "Sprite": {
         "ImageId": "Cuts_Doll_Fabric_001d",
-        "Tint": {"B": 255,"G": 255,"R": 255,"A": 255},
+        "Tint": {
+          "B": 255,
+          "G": 255,
+          "R": 255,
+          "A": 255
+        },
         "Layer": 0.6,
         "Pivot": "0.5, 0.5",
         "Effects": 0
@@ -64,14 +100,23 @@
     {
       "Active": true,
       "Type": "Nail",
-      "Transform": {"Position": "-210, -130", "Scale": "1.0, 1.0", "Angle": 0.0},
+      "Transform": {
+        "Position": "-210, -130",
+        "Scale": "1, 1",
+        "Angle": 0.0
+      },
       "Sprite": {
         "ImageId": "Nail_Doll_Fabric_001a",
-        "Tint": {"B": 255,"G": 255,"R": 255,"A": 255},
+        "Tint": {
+          "B": 255,
+          "G": 255,
+          "R": 255,
+          "A": 255
+        },
         "Layer": 0.6,
         "Pivot": "0.5, 0.5",
         "Effects": 0
       }
     }
-  ]
+  ],
 }

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using TheToymaker.Components;
@@ -29,8 +30,17 @@ namespace TheToymaker.Extensions
         
         public static void DrawHotspot(this SpriteBatch batch, HotSpot spot)
         {
-            var sprite = !string.IsNullOrEmpty(spot.Sprite.ImageId) ? spot.Sprite : spot.DebugSprite;
-            batch.DrawSprite(spot.Transform, sprite);
+            var scale = spot.Transform.Scale;
+
+            var boundingBox = spot.BoundingBox;
+            var width = Math.Abs(boundingBox.Max.X - boundingBox.Min.X);
+            var height = Math.Abs(boundingBox.Max.Y - boundingBox.Min.Y);
+            spot.Transform.Scale = new Vector2(width, height);
+            batch.DrawSprite(spot.Transform, spot.DebugSprite);
+
+            spot.Transform.Scale = scale;
+            if (!string.IsNullOrEmpty(spot.Sprite.ImageId))
+                batch.DrawSprite(spot.Transform, spot.Sprite);
         }
 
         public static void DrawSprite(this SpriteBatch spriteBatch, Transform2D transform, Sprite sprite)

@@ -78,8 +78,8 @@
     <Compile Include="GameDriver.cs" />
     <Compile Include="Systems\MouseGrab.cs" />
     <Compile Include="Systems\ReloadGameInterface.cs" />
-    <Compile Include="Systems\ReloadHotspots.cs" />
-    <Compile Include="Systems\UpdateToys.cs" />
+    <Compile Include="Systems\RefreshHotspotsState.cs" />
+    <Compile Include="Systems\RefreshToysState.cs" />
     <Compile Include="Systems\ToggleEditingMode.cs" />
     <Compile Include="Systems\ToggleFullScreen.cs" />
     <Compile Include="Systems\ToggleQuitGame.cs" />
@@ -89,6 +89,7 @@
     <Compile Include="Utilities\GenerateEnumList.cs" />
     <Compile Include="Utilities\GenerateSprite.cs" />
     <Compile Include="Utilities\Serialization\LoadToys.cs" />
+    <Compile Include="Utilities\Serialization\SaveHotspots.cs" />
     <Compile Include="Utilities\Serialization\SaveToys.cs" />
     <Compile Include="Utilities\Testing\GenerateTestHotspot.cs" />
     <Compile Include="Utilities\GetRandom.cs" />
