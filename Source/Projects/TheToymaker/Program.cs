@@ -37,6 +37,7 @@ namespace TheToymaker
                 driver.GameInterface = GameInterface.Initialize(driver);
                 driver.HotSpots = LoadHotSpots.Perform(driver);
                 driver.Toys = LoadToys.Perform(driver);
+                driver.Clock = DeskClock.Initialize(driver);
 
                 DebugMonitor.Initialize(driver);
                 driver.Run();

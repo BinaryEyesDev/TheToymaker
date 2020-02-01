@@ -1,0 +1,36 @@
+{
+  "HourHandTransform": {
+    "Position": "-821.999939, 82.5000153",
+    "Scale": "0.5, 0.5",
+    "Angle": 240.0
+  },
+  "HourHandSprite": {
+    "ImageId": "Clock_Hand_Small_000a",
+    "Tint": {
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 255
+    },
+    "Layer": 0.5,
+    "Pivot": "0.5, 1",
+    "Effects": 0
+  },
+  "MinuteHandTransform": {
+    "Position": "-821.999939, 82.5000153",
+    "Scale": "0.6, 0.6",
+    "Angle": 1.0
+  },
+  "MinuteHandSprite": {
+    "ImageId": "Clock_Hand_Small_000b",
+    "Tint": {
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 255
+    },
+    "Layer": 0.55,
+    "Pivot": "0.5, 1",
+    "Effects": 0
+  }
+}

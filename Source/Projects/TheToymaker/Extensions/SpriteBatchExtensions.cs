@@ -25,7 +25,7 @@ namespace TheToymaker.Extensions
                 batch.DrawSprite(damagePoint.GetGlobalTransform(), damagePoint.Sprite);
 
             ui.ToyLocationInFront.Scale = scale;
-            ui.ToyLocationOnTable.Scale = scale;
+            ui.ToyLocationOnTable.Scale = scale; 
         }
         
         public static void DrawHotspot(this SpriteBatch batch, HotSpot spot)
@@ -48,6 +48,9 @@ namespace TheToymaker.Extensions
 
         public static void DrawSprite(this SpriteBatch spriteBatch, Transform2D transform, Sprite sprite)
         {
+            if (string.IsNullOrEmpty(sprite.ImageId))
+                return;
+
             var texture = GameDriver.Instance.TextureBank.GetTexture(sprite.ImageId);
             var textureSize = new Vector2(texture.Width, texture.Height);
             var textureFrame = new Rectangle(0, 0, texture.Width, texture.Height);

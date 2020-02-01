@@ -5,7 +5,7 @@ using TheToymaker.Data;
 
 namespace TheToymaker.Systems
 {
-    public static class MouseGrab
+    public static class EditingMouseGrab
     {
         public static Transform2D Parent;
         public static Transform2D Grabbed;
@@ -34,9 +34,7 @@ namespace TheToymaker.Systems
             if (Parent == null)
                 Grabbed.Position = MouseInput.WorldPosition;
             else
-            {
                 Grabbed.Position = MouseInput.WorldPosition - Parent.Position;
-            }
         }
 
         private static void SearchForGrabbed(GameDriver driver)
@@ -50,8 +48,7 @@ namespace TheToymaker.Systems
                 if (!IsGrabbed(transform))
                     continue;
 
-                Log.Message($"Grabbed: Hotspot: {hotspot.Name}");
-                Grabbed = transform;
+                Grab(transform, null, $"Hotspot: {hotspot.Name}");
                 return;
             }
 
@@ -60,14 +57,25 @@ namespace TheToymaker.Systems
                 foreach (var damagePoint in toy.DamagePoints)
                 {
                     var transform = damagePoint.Transform;
-                    if (!IsGrabbed(damagePoint.GetGlobalTransform()))
+                    if (!IsGrabbed(damagePoint.GetGlobalTransform())) 
                         continue;
 
-                    Log.Message($"Grabbed: DamagePoint: {damagePoint.Type}");
-                    Parent = driver.GameInterface.ToyLocationInFront;
-                    Grabbed = transform;
+                    Grab(transform, GameDriver.Instance.GameInterface.ToyLocationInFront,  $"DamagePoint: {damagePoint.Type}");
+                    return;
                 }
             }
+
+            if (IsGrabbed(driver.Clock.HourHandTransform))
+                Grab(driver.Clock.HourHandTransform, null, "Clock: Hour Hand");
+            else if (IsGrabbed(driver.Clock.MinuteHandTransform))
+                Grab(driver.Clock.MinuteHandTransform, null, "Clock: Minute Hand");
+        }
+
+        private static void Grab(Transform2D target, Transform2D parent, string msg)
+        {
+            Log.Message($"Grabbed: {msg}");
+            Parent = parent;
+            Grabbed = target;
         }
 
         private static bool IsGrabbed(Transform2D transform)

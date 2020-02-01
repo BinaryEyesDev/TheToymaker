@@ -30,6 +30,7 @@ namespace TheToymaker
         public GameInterface GameInterface;
         public List<HotSpot> HotSpots;
         public List<Toy> Toys;
+        public DeskClock Clock;
 
         protected override void Update(GameTime time)
         {
@@ -47,9 +48,11 @@ namespace TheToymaker
             ReloadGameInterface.Perform(this);
             RefreshHotspotsState.Perform(this);
             RefreshToysState.Perform(this);
-            MouseGrab.Perform(this);
+            RefreshDeskClockState.Perform(this);
+            EditingMouseGrab.Perform(this);
             UpdateHotspots.Perform(this);
 
+            Clock.Update(frameTime);
             GameCamera.Update(GraphicsDevice.Viewport);
             DebugMonitor.Update(frameTime);
             base.Update(time);
@@ -69,6 +72,8 @@ namespace TheToymaker
             SpriteBatch.DrawSprite(GameInterface.TableTransform, GameInterface.TableSprite);
             SpriteBatch.DrawSprite(GameInterface.ToyLocationOnTable, GameInterface.Square);
             SpriteBatch.DrawSprite(GameInterface.ToyLocationInFront, GameInterface.Square);
+            SpriteBatch.DrawSprite(Clock.HourHandTransform, Clock.HourHandSprite);
+            SpriteBatch.DrawSprite(Clock.MinuteHandTransform, Clock.MinuteHandSprite);
             SpriteBatch.End();
 
             DebugMonitor.Draw();
