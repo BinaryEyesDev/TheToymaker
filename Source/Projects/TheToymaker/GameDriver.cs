@@ -76,7 +76,7 @@ namespace TheToymaker
 
             if (State == GameState.ClientLeaving)
             {
-
+                ChangeState(GameState.WaitingForClient);
             }
 
             Clock.Update(frameTime);

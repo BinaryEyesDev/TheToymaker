@@ -17,7 +17,17 @@ namespace TheToymaker.Utilities.Serialization
             foreach (var toyFile in toyFiles)
             {
                 var toy = JsonData.DeserializeFromFile<Toy>(toyFile);
+                toy.Active = false;
                 toy.Name = Path.GetFileNameWithoutExtension(toyFile);
+                foreach (var damage in toy.DamagePoints)
+                    damage.Active = true;
+
+                if (driver.CurrentToy != null && toy.Name == driver.CurrentToy.Name)
+                {
+                    toy.Active = true;
+                    driver.CurrentToy = toy;
+                }
+
                 toys.Add(toy);
             }
 
