@@ -17,7 +17,7 @@ namespace TheToymaker.Entities
                 Sprite = new Sprite
                 {
                     ImageId = "ShopBackground",
-                    Tint = Color.RosyBrown,
+                    Tint = Color.SaddleBrown,
                     Layer = 0.0001f,
                     Pivot = new Vector2(0.5f, 0.5f),
                     Effects = SpriteEffects.None,

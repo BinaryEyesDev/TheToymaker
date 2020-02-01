@@ -19,8 +19,9 @@ namespace TheToymaker.Systems
                 return;
             }
 
+            var customerIndex = GetRandom.Int(0, 2);
             driver.Customer.Transform.Position = driver.GameInterface.CustomerLocation.Position;
-            driver.Customer.Sprite.ImageId = "Customer_000";
+            driver.Customer.Sprite.ImageId = $"Customer_00{customerIndex}";
 
             foreach (var toy in driver.Toys)
                 toy.Active = false;
