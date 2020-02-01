@@ -62,7 +62,7 @@
     <Compile Include="Components\ToyDamagePoint.cs" />
     <Compile Include="Data\FrameInput.cs" />
     <Compile Include="Data\FrameTime.cs" />
-    <Compile Include="Data\HotSpot.cs" />
+    <Compile Include="Data\Hotspot.cs" />
     <Compile Include="Data\MouseInput.cs" />
     <Compile Include="Data\StringConfiguration.cs" />
     <Compile Include="Data\TextureBank.cs" />

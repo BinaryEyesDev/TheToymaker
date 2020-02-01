@@ -7,7 +7,7 @@ namespace TheToymaker.Utilities.Testing
     {
         public static void Perform()
         {
-            var hotspot = new HotSpot
+            var hotspot = new Hotspot
             {
                 Name = "Hotspot",
                 Sprite = GenerateSprite.Default(),

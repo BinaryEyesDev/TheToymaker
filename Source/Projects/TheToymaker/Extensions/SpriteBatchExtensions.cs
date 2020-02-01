@@ -28,7 +28,7 @@ namespace TheToymaker.Extensions
             ui.ToyLocationOnTable.Scale = scale; 
         }
         
-        public static void DrawHotspot(this SpriteBatch batch, HotSpot spot)
+        public static void DrawHotspot(this SpriteBatch batch, Hotspot spot)
         {
             var scale = spot.Transform.Scale;
 

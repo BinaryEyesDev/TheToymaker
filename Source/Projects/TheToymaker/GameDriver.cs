@@ -28,7 +28,7 @@ namespace TheToymaker
         public SpriteBatch SpriteBatch;
         public Camera2D GameCamera;
         public GameInterface GameInterface;
-        public List<HotSpot> HotSpots;
+        public List<Hotspot> HotSpots;
         public List<Toy> Toys;
         public DeskClock Clock;
 
@@ -50,7 +50,7 @@ namespace TheToymaker
             RefreshToysState.Perform(this);
             RefreshDeskClockState.Perform(this);
             EditingMouseGrab.Perform(this);
-            UpdateHotspots.Perform(this);
+            UpdateHotspots.HandleHotspotInteraction(this);
 
             Clock.Update(frameTime);
             GameCamera.Update(GraphicsDevice.Viewport);

@@ -7,16 +7,16 @@ namespace TheToymaker.Utilities
 {
     public static class LoadHotSpots
     {
-        public static List<HotSpot> Perform(GameDriver driver)
+        public static List<Hotspot> Perform(GameDriver driver)
         {
             var hotspotFolder = DataPath.Get("Hotspots");
             var hotspotFiles = Directory.GetFiles(hotspotFolder);
             Log.Message($"Found {hotspotFiles.Length} Hotspot Files");
 
-            var hotspots = new List<HotSpot>();
+            var hotspots = new List<Hotspot>();
             foreach (var hotspotFile in hotspotFiles)
             {
-                var hotspot = JsonData.DeserializeFromFile<HotSpot>(hotspotFile);
+                var hotspot = JsonData.DeserializeFromFile<Hotspot>(hotspotFile);
                 hotspot.Name = Path.GetFileNameWithoutExtension(hotspotFile);
                 hotspots.Add(hotspot);
             }

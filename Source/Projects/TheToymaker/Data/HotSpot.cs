@@ -5,7 +5,7 @@ using TheToymaker.Components;
 namespace TheToymaker.Data
 {
     [Serializable]
-    public class HotSpot
+    public class Hotspot
     {
         public Transform2D Transform;
         public Sprite DebugSprite;
