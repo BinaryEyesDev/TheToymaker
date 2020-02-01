@@ -21,6 +21,7 @@
     "SewingKit": "Textures\\Tools\\SewingKit_000",
     "PaintingKit": "Textures\\Tools\\PaintKit_000",
     "Paintbrush": "Textures\\Tools\\Paintbrush_000",
+    "PhoneMachine": "Textures\\Game\\PhoneMachine",
     "Customer_000": "Textures\\Customers\\FakeCustomer",
     "Customer_001": "Textures\\Game\\Customer_001",
 }
