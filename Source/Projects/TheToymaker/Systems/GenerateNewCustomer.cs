@@ -11,6 +11,9 @@ namespace TheToymaker.Systems
     {
         public static void Perform(GameDriver driver)
         {
+            driver.Customer.Transform.Position = driver.GameInterface.CustomerLocation.Position;
+            driver.Customer.Sprite.ImageId = "Customer_000";
+
             foreach (var toy in driver.Toys)
                 toy.Active = false;
 

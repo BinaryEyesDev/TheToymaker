@@ -67,6 +67,7 @@
     <Compile Include="Data\MouseInput.cs" />
     <Compile Include="Data\StringConfiguration.cs" />
     <Compile Include="Data\TextureBank.cs" />
+    <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\DeskClock.cs" />
     <Compile Include="Entities\GameInterface.cs" />
     <Compile Include="Entities\SewingKit.cs" />

@@ -14,6 +14,7 @@ namespace TheToymaker.Entities
         public Sprite Square;
         public Transform2D ToyLocationOnTable;
         public Transform2D ToyLocationInFront;
+        public Transform2D CustomerLocation;
 
         public static GameInterface Initialize(GameDriver driver)
         {

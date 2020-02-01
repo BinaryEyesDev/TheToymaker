@@ -28,7 +28,7 @@ namespace TheToymaker
                 driver.ChangeState(GameState.Initializing);
                 driver.IsMouseVisible = true;
                 driver.Content.RootDirectory = "Content";
-                driver.BackgroundColor = Color.CornflowerBlue;
+                driver.BackgroundColor = Color.DarkGray;
                 driver.TimeScale = 1.0f;
                 driver.Graphics = GenerateDeviceManager(driver);
                 driver.TextureBank = new TextureBank().Initialize(driver);
@@ -40,6 +40,7 @@ namespace TheToymaker
                 driver.Toys = LoadToys.Perform(driver);
                 driver.Clock = DeskClock.Initialize(driver);
                 driver.SewingKit = SewingKit.Initialize(driver);
+                driver.Customer = Customer.Initialize(driver);
 
                 DebugMonitor.Initialize(driver);
 
@@ -48,14 +49,6 @@ namespace TheToymaker
             }
 
             DisposeLogging.Perform();
-        }
-
-        private static List<string> FindTextureFiles()
-        {
-            var directory = Directory.GetCurrentDirectory();
-            var contentFolder = Path.Combine(directory, "Content");
-            var texturesFolder = Path.Combine(contentFolder, "Textures", "Game");
-            return Directory.GetFiles(texturesFolder).ToList();
         }
 
         private static Camera2D GenerateGameCamera(GameDriver driver)
