@@ -1,0 +1,19 @@
+{
+  "Transform": {
+    "Position": "0, 82.5000153",
+    "Scale": "0.25, 0.25",
+    "Angle": 0.0
+  },
+  "Sprite": {
+    "ImageId": "SewingKit",
+    "Tint": {
+      "B": 200,
+      "G": 200,
+      "R": 200,
+      "A": 255
+    },
+    "Layer": 0.5,
+    "Pivot": "0.5, 0.5",
+    "Effects": 0
+  },
+}

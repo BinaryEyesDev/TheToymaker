@@ -4,7 +4,7 @@ using TheToymaker.Utilities.Serialization;
 
 namespace TheToymaker.Systems
 {
-    public static class RefreshDeskClockState
+    public static class RefreshBackgroundElements
     {
         public static void Perform(GameDriver driver)
         {
@@ -12,9 +12,15 @@ namespace TheToymaker.Systems
                 return;
 
             if (!KeyInput.IsPressed(Keys.LeftAlt))
+            {
                 driver.Clock = LoadClock.Perform(driver);
+                driver.SewingKit = LoadSewingKit.Perform(driver);
+            }
             else
+            {
                 SaveClock.Perform();
+                SaveSewingKit.Perform();
+            }
         }
     }
 }

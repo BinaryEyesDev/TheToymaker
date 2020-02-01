@@ -39,6 +39,7 @@ namespace TheToymaker
                 driver.HotSpots = LoadHotSpots.Perform(driver);
                 driver.Toys = LoadToys.Perform(driver);
                 driver.Clock = DeskClock.Initialize(driver);
+                driver.SewingKit = SewingKit.Initialize(driver);
 
                 DebugMonitor.Initialize(driver);
 

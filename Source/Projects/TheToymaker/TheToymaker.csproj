@@ -69,6 +69,7 @@
     <Compile Include="Data\TextureBank.cs" />
     <Compile Include="Entities\DeskClock.cs" />
     <Compile Include="Entities\GameInterface.cs" />
+    <Compile Include="Entities\SewingKit.cs" />
     <Compile Include="Entities\Table.cs" />
     <Compile Include="Entities\Toy.cs" />
     <Compile Include="Events\GameStateChanged.cs" />
@@ -82,7 +83,7 @@
     <Compile Include="GameDriver.cs" />
     <Compile Include="Systems\EditingMouseGrab.cs" />
     <Compile Include="Systems\GenerateNewCustomer.cs" />
-    <Compile Include="Systems\RefreshDeskClockState.cs" />
+    <Compile Include="Systems\RefreshBackgroundElements.cs" />
     <Compile Include="Systems\ReloadGameInterface.cs" />
     <Compile Include="Systems\RefreshHotspotsState.cs" />
     <Compile Include="Systems\RefreshToysState.cs" />
@@ -97,7 +98,9 @@
     <Compile Include="Utilities\GenerateEnumList.cs" />
     <Compile Include="Utilities\GenerateSprite.cs" />
     <Compile Include="Utilities\Serialization\LoadClock.cs" />
+    <Compile Include="Utilities\Serialization\LoadSewingKit.cs" />
     <Compile Include="Utilities\Serialization\LoadToys.cs" />
+    <Compile Include="Utilities\Serialization\SaveSewingKit.cs" />
     <Compile Include="Utilities\Serialization\SaveClock.cs" />
     <Compile Include="Utilities\Serialization\SaveHotspots.cs" />
     <Compile Include="Utilities\Serialization\SaveToys.cs" />

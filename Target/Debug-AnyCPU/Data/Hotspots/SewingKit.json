@@ -1,7 +1,7 @@
 {
   "Transform": {
-    "Position": "-614.999939, 229.5",
-    "Scale": "0.5, 0.5",
+    "Position": "-72.00001, 174",
+    "Scale": "0.25, 0.25",
     "Angle": 0.0
   },
   "DebugSprite": {
@@ -17,20 +17,20 @@
     "Effects": 0
   },
   "Sprite": {
-    "ImageId": "",
+    "ImageId": "Needle",
     "Tint": {
       "B": 255,
       "G": 255,
       "R": 255,
       "A": 255
     },
-    "Layer": 0.5,
-    "Pivot": "0.5, 0.5",
+    "Layer": 0.7,
+    "Pivot": "0.5, 0.6",
     "Effects": 0
   },
   "BoundingBox": {
-    "Min": "-20, -20, 0",
-    "Max": "20, 20, 0"
+    "Min": "-20, -30, 0",
+    "Max": "20, 30, 0"
   },
   "DamageTarget": "BurstSeam",
   "ActivationTime": 15.0

@@ -1,9 +1,11 @@
-﻿using TheToymaker.Components;
+﻿using System;
+using TheToymaker.Components;
 using TheToymaker.Data;
 using TheToymaker.Utilities;
 
 namespace TheToymaker.Entities
 {
+    [Serializable]
     public class DeskClock
     {
         public float Rate;

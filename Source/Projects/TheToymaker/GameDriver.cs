@@ -34,8 +34,12 @@ namespace TheToymaker
         public GameInterface GameInterface;
         public List<Hotspot> HotSpots;
         public List<Toy> Toys;
-        public DeskClock Clock;
         public Toy CurrentToy;
+        public List<Toy> WaitingToyLine { get; set; }
+
+        //Background Elements
+        public DeskClock Clock;
+        public SewingKit SewingKit;
 
         public GameDriver ChangeState(GameState next)
         {
@@ -60,7 +64,7 @@ namespace TheToymaker
             ReloadGameInterface.Perform(this);
             RefreshHotspotsState.Perform(this);
             RefreshToysState.Perform(this);
-            RefreshDeskClockState.Perform(this);
+            RefreshBackgroundElements.Perform(this);
             EditingMouseGrab.Perform(this);
 
             if (State == GameState.WaitingForClient)
@@ -101,6 +105,7 @@ namespace TheToymaker
             SpriteBatch.DrawSprite(GameInterface.ToyLocationInFront, GameInterface.Square);
             SpriteBatch.DrawSprite(Clock.HourHandTransform, Clock.HourHandSprite);
             SpriteBatch.DrawSprite(Clock.MinuteHandTransform, Clock.MinuteHandSprite);
+            SpriteBatch.DrawSprite(SewingKit.Transform, SewingKit.Sprite);
             SpriteBatch.End();
 
             DebugMonitor.Draw();
