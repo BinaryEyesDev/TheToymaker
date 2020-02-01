@@ -10,7 +10,6 @@ namespace TheToymaker.Systems
             if (!currentToy.IsFixed)
                 return;
 
-            currentToy.Active = false;
             HandleHotspotInteraction.SendCurrentToolToStart();
             driver.ChangeState(GameState.ClientPayment);
         }

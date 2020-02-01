@@ -39,7 +39,7 @@ namespace TheToymaker.Extensions
                 batch.DrawSprite(damagePoint.GetGlobalTransform(), damagePoint.Sprite);
 
             ui.ToyLocationInFront.Scale = scale;
-            ui.ToyLocationOnTable.Scale = scale; 
+            ui.ToyLocationOnTable.Scale = scale;
         }
         
         public static void DrawHotspot(this SpriteBatch batch, Hotspot spot)

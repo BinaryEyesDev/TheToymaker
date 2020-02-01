@@ -140,7 +140,7 @@
 /processorParam:TextureFormat=Color
 /build:Textures/Game/Clock_Hand_Small_000a.png
 
-#begin Textures/Game/Clock_Hand_Small_000b.png
+#begin Textures/Game/Clock_Hand_Small_000a.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -150,7 +150,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/Game/Clock_Hand_Small_000b.png
+/build:Textures/Game/Clock_Hand_Small_000a.png
 
 #begin Textures/Game/Clock_Hand_Small_000b.png
 /importer:TextureImporter
@@ -223,6 +223,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Textures/Game/Clock_Hand_Small_000b.png
+
+#begin Textures/Game/Clock_Hand_Small_000b.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Clock_Hand_Small_000b.png
+
+#begin Textures/Game/Clock_Hand_Small_000b.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Clock_Hand_Small_000b.png
+
+#begin Textures/Game/Clock_Small_000.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Clock_Small_000.png
 
 #begin Textures/Game/Clock_Small_000.png
 /importer:TextureImporter
@@ -320,7 +356,7 @@
 /processorParam:TextureFormat=Color
 /build:Textures/Game/Customer_001.png
 
-#begin Textures/Game/Cuts_Doll_Fabric_001a.png
+#begin Textures/Game/Customer_001.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -330,7 +366,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/Game/Cuts_Doll_Fabric_001a.png
+/build:Textures/Game/Customer_001.png
 
 #begin Textures/Game/Cuts_Doll_Fabric_001a.png
 /importer:TextureImporter
@@ -403,6 +439,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Textures/Game/Cuts_Doll_Fabric_001a.png
+
+#begin Textures/Game/Cuts_Doll_Fabric_001a.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Cuts_Doll_Fabric_001a.png
+
+#begin Textures/Game/Cuts_Doll_Fabric_001a.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Cuts_Doll_Fabric_001a.png
+
+#begin Textures/Game/Cuts_Doll_Fabric_001b.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Cuts_Doll_Fabric_001b.png
 
 #begin Textures/Game/Cuts_Doll_Fabric_001b.png
 /importer:TextureImporter
@@ -572,7 +644,7 @@
 /processorParam:TextureFormat=Color
 /build:Textures/Game/Cuts_Doll_Fabric_001c.png
 
-#begin Textures/Game/Cuts_Doll_Fabric_001d.png
+#begin Textures/Game/Cuts_Doll_Fabric_001c.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -582,7 +654,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/Game/Cuts_Doll_Fabric_001d.png
+/build:Textures/Game/Cuts_Doll_Fabric_001c.png
 
 #begin Textures/Game/Cuts_Doll_Fabric_001d.png
 /importer:TextureImporter
@@ -655,6 +727,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Textures/Game/Cuts_Doll_Fabric_001d.png
+
+#begin Textures/Game/Cuts_Doll_Fabric_001d.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Cuts_Doll_Fabric_001d.png
+
+#begin Textures/Game/Cuts_Doll_Fabric_001d.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Cuts_Doll_Fabric_001d.png
+
+#begin Textures/Game/Doll_Fabric_001.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Doll_Fabric_001.png
 
 #begin Textures/Game/Doll_Fabric_001.png
 /importer:TextureImporter
@@ -811,6 +919,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Textures/Game/Doll_Fabric_002.png
+
+#begin Textures/Game/Doll_Fabric_002.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Doll_Fabric_002.png
+
+#begin Textures/Game/Doll_Wooden_000.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Doll_Wooden_000.png
 
 #begin Textures/Game/Doll_Wooden_000.png
 /importer:TextureImporter
@@ -944,7 +1076,7 @@
 /processorParam:TextureFormat=Color
 /build:Textures/Game/MissingPaint_Doll_Fabric_001a.png
 
-#begin Textures/Game/MissingPaint_Doll_Wooden_001a.png
+#begin Textures/Game/MissingPaint_Doll_Fabric_001a.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -954,7 +1086,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/Game/MissingPaint_Doll_Wooden_001a.png
+/build:Textures/Game/MissingPaint_Doll_Fabric_001a.png
 
 #begin Textures/Game/MissingPaint_Doll_Wooden_001a.png
 /importer:TextureImporter
@@ -980,7 +1112,7 @@
 /processorParam:TextureFormat=Color
 /build:Textures/Game/MissingPaint_Doll_Wooden_001a.png
 
-#begin Textures/Game/Money_Bill_000.png
+#begin Textures/Game/MissingPaint_Doll_Wooden_001a.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -990,7 +1122,19 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/Game/Money_Bill_000.png
+/build:Textures/Game/MissingPaint_Doll_Wooden_001a.png
+
+#begin Textures/Game/MissingPaint_Doll_Wooden_001a.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/MissingPaint_Doll_Wooden_001a.png
 
 #begin Textures/Game/Money_Bill_000.png
 /importer:TextureImporter
@@ -1039,6 +1183,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Textures/Game/Money_Bill_000.png
+
+#begin Textures/Game/Money_Bill_000.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Money_Bill_000.png
+
+#begin Textures/Game/Money_Bill_000.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Money_Bill_000.png
+
+#begin Textures/Game/Nail_Doll_Fabric_001a.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Nail_Doll_Fabric_001a.png
 
 #begin Textures/Game/Nail_Doll_Fabric_001a.png
 /importer:TextureImporter
@@ -1136,6 +1316,18 @@
 /processorParam:TextureFormat=Color
 /build:Textures/Game/PhoneMachine.png
 
+#begin Textures/Game/PhoneMachine.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/PhoneMachine.png
+
 #begin Textures/Game/Shop_Background_000.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1159,6 +1351,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Textures/Game/Shop_Background_000.png
+
+#begin Textures/Game/Shop_Background_000.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Shop_Background_000.png
+
+#begin Textures/Game/Speech_000.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Speech_000.png
+
+#begin Textures/Game/Table_Wood_000.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Game/Table_Wood_000.png
 
 #begin Textures/Game/Table_Wood_000.png
 /importer:TextureImporter

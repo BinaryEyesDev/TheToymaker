@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Xna.Framework;
 using TheToymaker.Data;
 using TheToymaker.Entities;
 using TheToymaker.Extensions;
@@ -19,6 +20,9 @@ namespace TheToymaker.Systems
                 return;
             }
 
+            var speechSprite = driver.GameInterface.SpeechSprite;
+            speechSprite.Tint = new Color(speechSprite.Tint, 0.8f);
+            
             var customerIndex = GetRandom.Int(0, 2);
             driver.Customer.Transform.Position = driver.GameInterface.CustomerLocation.Position;
             driver.Customer.Sprite.ImageId = $"Customer_00{customerIndex}";

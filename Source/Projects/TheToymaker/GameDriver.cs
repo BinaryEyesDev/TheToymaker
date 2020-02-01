@@ -83,15 +83,18 @@ namespace TheToymaker
             {
                 HandleHotspotInteraction.Perform(this);
                 ResolveCurrentToy.Perform(this);
+                HandlePaymentProcess.Paid = false;
+                HandlePaymentProcess.Delay = 1.5f;
             }
 
             if (State == GameState.ClientPayment)
             {
-                HandlePaymentProcess.Perform(this);
+                HandlePaymentProcess.Perform(this, frameTime);
             }
 
             if (State == GameState.ClientLeaving)
             {
+                GameInterface.SpeechSprite.Tint = new Color(GameInterface.SpeechSprite.Tint, 0.0f);
                 GenerateNewCustomer.WaitTime = GetRandom.Float(1.0f, 2.0f);
                 ChangeState(GameState.WaitingForClient);
             }
@@ -120,11 +123,13 @@ namespace TheToymaker
                 SpriteBatch.DrawSprite(GameInterface.ToyLocationInFront, GameInterface.Square);
                 SpriteBatch.DrawSprite(GameInterface.CustomerLocation, GameInterface.Square);
                 SpriteBatch.DrawSprite(GameInterface.SpeechLocation, GameInterface.Square);
+                SpriteBatch.DrawSprite(GameInterface.PhoneSpeechLocation, GameInterface.Square);
                 SpriteBatch.DrawSprite(GameInterface.MoneyLocation, GameInterface.Square);
             }
 
             SpriteBatch.DrawMoney(Money);
             SpriteBatch.DrawSprite(GameInterface.TableTransform, GameInterface.TableSprite);
+            SpriteBatch.DrawSprite(GameInterface.SpeechLocation, GameInterface.SpeechSprite);
             SpriteBatch.DrawSprite(Clock.HourHandTransform, Clock.HourHandSprite);
             SpriteBatch.DrawSprite(Clock.MinuteHandTransform, Clock.MinuteHandSprite);
             SpriteBatch.DrawSprite(SewingKit.Transform, SewingKit.Sprite);

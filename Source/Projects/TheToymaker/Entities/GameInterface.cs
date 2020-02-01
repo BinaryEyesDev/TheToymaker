@@ -9,6 +9,7 @@ namespace TheToymaker.Entities
     public class GameInterface
     {
         public Sprite TableSprite;
+        public Sprite SpeechSprite;
         public Transform2D TableTransform;
         
         public Sprite Square;
@@ -17,6 +18,7 @@ namespace TheToymaker.Entities
         public Transform2D CustomerLocation;
         public Transform2D SpeechLocation;
         public Transform2D MoneyLocation;
+        public Transform2D PhoneSpeechLocation;
 
         public static GameInterface Initialize(GameDriver driver)
         {
