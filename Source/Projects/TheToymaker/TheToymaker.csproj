@@ -73,6 +73,7 @@
     <Compile Include="Entities\Money.cs" />
     <Compile Include="Entities\SewingKit - Copy.cs" />
     <Compile Include="Entities\SewingKit.cs" />
+    <Compile Include="Entities\ShopBackground.cs" />
     <Compile Include="Entities\Table.cs" />
     <Compile Include="Entities\Toy.cs" />
     <Compile Include="Events\GameStateChanged.cs" />

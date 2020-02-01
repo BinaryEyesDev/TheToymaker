@@ -9,8 +9,16 @@ namespace TheToymaker.Systems
 {
     public static class GenerateNewCustomer
     {
-        public static void Perform(GameDriver driver)
+        public static float WaitTime = -1.0f;
+
+        public static void Perform(GameDriver driver, FrameTime time)
         {
+            if (WaitTime > 0.0f)
+            {
+                WaitTime -= time.Elapsed;
+                return;
+            }
+
             driver.Customer.Transform.Position = driver.GameInterface.CustomerLocation.Position;
             driver.Customer.Sprite.ImageId = "Customer_000";
 

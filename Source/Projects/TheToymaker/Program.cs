@@ -36,6 +36,7 @@ namespace TheToymaker
                 driver.SpriteBatch = new SpriteBatch(driver.GraphicsDevice);
                 driver.GameCamera = GenerateGameCamera(driver);
                 driver.GameInterface = GameInterface.Initialize(driver);
+                driver.ShopBackground = ShopBackground.Initialize(driver);
                 driver.Money = Money.Initialize(driver);
                 driver.HotSpots = LoadHotSpots.Perform(driver);
                 driver.Toys = LoadToys.Perform(driver);

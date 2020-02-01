@@ -1,7 +1,7 @@
 {
-  "Active": false,
+  "Active": true,
   "LargeSprite": {
-    "ImageId": "Doll_Fabric_002",
+    "ImageId": "Doll_Wooden_001",
     "Tint": {
       "B": 255,
       "G": 255,
@@ -17,7 +17,7 @@
       "Active": true,
       "Type": "BurstSeam",
       "Transform": {
-        "Position": "232.499939, -34.49998",
+        "Position": "101.999939, -47.9999771",
         "Scale": "1, 1",
         "Angle": 0.0
       },
@@ -38,7 +38,7 @@
       "Active": true,
       "Type": "BurstSeam",
       "Transform": {
-        "Position": "-21.000061, -382.499939",
+        "Position": "190.499939, 48.0000153",
         "Scale": "1, 1",
         "Angle": 0.0
       },
@@ -57,35 +57,14 @@
     },
     {
       "Active": true,
-      "Type": "BurstSeam",
+      "Type": "Nail",
       "Transform": {
-        "Position": "46.49994, 183",
+        "Position": "251.999939, -77.99998",
         "Scale": "1, 1",
         "Angle": 0.0
       },
       "Sprite": {
-        "ImageId": "Cuts_Doll_Fabric_001c",
-        "Tint": {
-          "B": 255,
-          "G": 255,
-          "R": 255,
-          "A": 255
-        },
-        "Layer": 0.6,
-        "Pivot": "0.5, 0.5",
-        "Effects": 0
-      }
-    },
-    {
-      "Active": true,
-      "Type": "BurstSeam",
-      "Transform": {
-        "Position": "67.49994, 390",
-        "Scale": "1, 1",
-        "Angle": 0.0
-      },
-      "Sprite": {
-        "ImageId": "Cuts_Doll_Fabric_001d",
+        "ImageId": "Nail_Doll_Fabric_001a",
         "Tint": {
           "B": 255,
           "G": 255,
@@ -101,7 +80,7 @@
       "Active": true,
       "Type": "Nail",
       "Transform": {
-        "Position": "-64.50006, 151.5",
+        "Position": "154.499939, -401.999939",
         "Scale": "1, 1",
         "Angle": 0.0
       },
@@ -122,12 +101,12 @@
       "Active": true,
       "Type": "WashedOutPaint",
       "Transform": {
-        "Position": "-30.000061, -340.499969",
+        "Position": "139.499939, 264",
         "Scale": "1, 1",
         "Angle": 0.0
       },
       "Sprite": {
-        "ImageId": "MissingPaint_Doll_Fabric_001a",
+        "ImageId": "MissingPaint_Doll_Wooden_001a",
         "Tint": {
           "B": 255,
           "G": 255,
@@ -143,12 +122,12 @@
       "Active": true,
       "Type": "WashedOutPaint",
       "Transform": {
-        "Position": "98.99994, -319.499969",
+        "Position": "13.499939, 67.5000153",
         "Scale": "1, 1",
         "Angle": 0.0
       },
       "Sprite": {
-        "ImageId": "MissingPaint_Doll_Fabric_001a",
+        "ImageId": "MissingPaint_Doll_Wooden_001a",
         "Tint": {
           "B": 255,
           "G": 255,

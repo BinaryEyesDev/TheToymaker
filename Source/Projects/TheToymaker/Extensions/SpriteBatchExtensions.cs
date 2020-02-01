@@ -22,6 +22,10 @@ namespace TheToymaker.Extensions
 
         public static void DrawToy(this SpriteBatch batch, Toy toy)
         {
+            var gameState = GameDriver.Instance.State;
+            if (gameState == GameState.ClientLeaving || gameState == GameState.WaitingForClient)
+                return;
+
             var ui = GameDriver.Instance.GameInterface;
             var scale = ui.ToyLocationInFront.Scale;
 

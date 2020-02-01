@@ -10,6 +10,7 @@ using TheToymaker.Entities;
 using TheToymaker.Events;
 using TheToymaker.Extensions;
 using TheToymaker.Systems;
+using TheToymaker.Utilities;
 
 namespace TheToymaker
 {
@@ -32,6 +33,7 @@ namespace TheToymaker
         public SpriteBatch SpriteBatch;
         public Camera2D GameCamera;
         public GameInterface GameInterface;
+        public ShopBackground ShopBackground;
 
         //Gameplay
         public Money Money;
@@ -74,7 +76,7 @@ namespace TheToymaker
 
             if (State == GameState.WaitingForClient)
             {
-                GenerateNewCustomer.Perform(this);
+                GenerateNewCustomer.Perform(this, frameTime);
             }
 
             if (State == GameState.FixingToy)
@@ -90,6 +92,7 @@ namespace TheToymaker
 
             if (State == GameState.ClientLeaving)
             {
+                GenerateNewCustomer.WaitTime = GetRandom.Float(1.0f, 2.0f);
                 ChangeState(GameState.WaitingForClient);
             }
 
@@ -103,6 +106,7 @@ namespace TheToymaker
         {
             GraphicsDevice.Clear(BackgroundColor);
             SpriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.NonPremultiplied, SamplerState.PointClamp, null, null, null, GameCamera.Transformation);
+            SpriteBatch.DrawSprite(ShopBackground.Transform, ShopBackground.Sprite);
 
             foreach (var hotspot in HotSpots)
                 SpriteBatch.DrawHotspot(hotspot);
@@ -125,7 +129,10 @@ namespace TheToymaker
             SpriteBatch.DrawSprite(Clock.MinuteHandTransform, Clock.MinuteHandSprite);
             SpriteBatch.DrawSprite(SewingKit.Transform, SewingKit.Sprite);
             SpriteBatch.DrawSprite(PaintingKit.Transform, PaintingKit.Sprite);
-            SpriteBatch.DrawSprite(Customer.Transform, Customer.Sprite);
+
+            if (State != GameState.WaitingForClient && State != GameState.ClientLeaving)
+                SpriteBatch.DrawSprite(Customer.Transform, Customer.Sprite);
+
             SpriteBatch.End();
 
             DebugMonitor.Draw();

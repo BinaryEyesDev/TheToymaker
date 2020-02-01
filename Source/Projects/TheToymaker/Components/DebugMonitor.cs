@@ -23,6 +23,8 @@ namespace TheToymaker.Components
         {
             var editModeState = GameDriver.Instance.EditingMode ? "On" : "Off";
             var showHotspots = GameDriver.Instance.ShowHotspotBox ? "Visible" : "Hidden";
+            var minuteAngle = (int)GameDriver.Instance.Clock.MinuteHandTransform.Angle;
+            var minute = minuteAngle%6;
 
             _spriteBatch.Begin();
             //_spriteBatch.DrawString(_font, $"TimeScale: {GameDriver.Instance.TimeScale}", new Vector2(10.0f, 10.0f), Color.White);
@@ -30,7 +32,8 @@ namespace TheToymaker.Components
             //_spriteBatch.DrawString(_font, $"Mouse World Position: {MouseInput.WorldPosition}", new Vector2(10.0f, 50.0f), Color.White);
             _spriteBatch.DrawString(_font, $"Editing Mode: {editModeState}", new Vector2(10.0f, 5.0f), Color.White);
             _spriteBatch.DrawString(_font, $"Hotspot Boxes: {showHotspots}", new Vector2(10.0f, 25.0f), Color.White);
-            _spriteBatch.DrawString(_font, $"Time: {GameDriver.Instance.Clock.Time}", new Vector2(10.0f, 45.0f), Color.White);
+            _spriteBatch.DrawString(_font, $"Hour: {GameDriver.Instance.Clock.Hour}", new Vector2(10.0f, 45.0f), Color.White);
+            _spriteBatch.DrawString(_font, $"Minute: {GameDriver.Instance.Clock.Minute}", new Vector2(10.0f, 65.0f), Color.White);
 
             _spriteBatch.End();
         }
