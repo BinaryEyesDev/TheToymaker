@@ -1,8 +1,8 @@
 {
   "Transform": {
-    "Position": "0, 378",
-    "Scale": "1, 1",
-    "Angle": 0.0
+    "Position": "-599.999939, 219",
+    "Scale": "0.3, 0.3",
+    "Angle": 100.0
   },
   "DebugSprite": {
     "ImageId": "Square",
@@ -17,20 +17,20 @@
     "Effects": 0
   },
   "Sprite": {
-    "ImageId": "",
+    "ImageId": "Paintbrush",
     "Tint": {
       "B": 255,
       "G": 255,
       "R": 255,
       "A": 255
     },
-    "Layer": 0.5,
+    "Layer": 0.65,
     "Pivot": "0.5, 0.5",
     "Effects": 0
   },
   "BoundingBox": {
-    "Min": "-30, -30, 0",
-    "Max": "30, 30, 0"
+    "Min": "-20, -70, 0",
+    "Max": "20, 70, 0"
   },
   "DamageTarget": "WashedOutPaint",
   "ActivationTime": 18.0

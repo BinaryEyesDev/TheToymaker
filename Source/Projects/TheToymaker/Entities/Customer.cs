@@ -18,7 +18,7 @@ namespace TheToymaker.Entities
                 {
                     ImageId = "",
                     Tint = Color.White,
-                    Layer = 0.1f,
+                    Layer = 0.01f,
                     Pivot = new Vector2(0.5f, 1.0f),
                     Effects = SpriteEffects.None,
                 },

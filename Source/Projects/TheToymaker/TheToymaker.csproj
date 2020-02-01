@@ -70,6 +70,7 @@
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\DeskClock.cs" />
     <Compile Include="Entities\GameInterface.cs" />
+    <Compile Include="Entities\SewingKit - Copy.cs" />
     <Compile Include="Entities\SewingKit.cs" />
     <Compile Include="Entities\Table.cs" />
     <Compile Include="Entities\Toy.cs" />
@@ -99,8 +100,10 @@
     <Compile Include="Utilities\GenerateEnumList.cs" />
     <Compile Include="Utilities\GenerateSprite.cs" />
     <Compile Include="Utilities\Serialization\LoadClock.cs" />
+    <Compile Include="Utilities\Serialization\LoadPaintingKit.cs" />
     <Compile Include="Utilities\Serialization\LoadSewingKit.cs" />
     <Compile Include="Utilities\Serialization\LoadToys.cs" />
+    <Compile Include="Utilities\Serialization\SavePaintingKit.cs" />
     <Compile Include="Utilities\Serialization\SaveSewingKit.cs" />
     <Compile Include="Utilities\Serialization\SaveClock.cs" />
     <Compile Include="Utilities\Serialization\SaveHotspots.cs" />

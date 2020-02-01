@@ -1,0 +1,19 @@
+{
+  "Transform": {
+    "Position": "-589.499939, 112.500008",
+    "Scale": "0.5, 0.5",
+    "Angle": 0.0
+  },
+  "Sprite": {
+    "ImageId": "PaintingKit",
+    "Tint": {
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 255
+    },
+    "Layer": 0.4,
+    "Pivot": "0.5, 0.5",
+    "Effects": 0
+  }
+}

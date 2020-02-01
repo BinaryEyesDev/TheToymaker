@@ -15,6 +15,7 @@ namespace TheToymaker.Entities
         public Transform2D ToyLocationOnTable;
         public Transform2D ToyLocationInFront;
         public Transform2D CustomerLocation;
+        public Transform2D SpeechLocation;
 
         public static GameInterface Initialize(GameDriver driver)
         {

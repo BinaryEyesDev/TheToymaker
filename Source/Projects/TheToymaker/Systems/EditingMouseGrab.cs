@@ -71,6 +71,8 @@ namespace TheToymaker.Systems
                 Grab(driver.Clock.MinuteHandTransform, null, "Clock: Minute Hand");
             else if (IsGrabbed(driver.SewingKit.Transform))
                 Grab(driver.SewingKit.Transform, null, "SewingKit");
+            else if (IsGrabbed(driver.PaintingKit.Transform))
+                Grab(driver.PaintingKit.Transform, null, "PaintingKit");
         }
 
         private static void Grab(Transform2D target, Transform2D parent, string msg)

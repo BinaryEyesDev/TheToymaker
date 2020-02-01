@@ -15,11 +15,13 @@ namespace TheToymaker.Systems
             {
                 driver.Clock = LoadClock.Perform(driver);
                 driver.SewingKit = LoadSewingKit.Perform(driver);
+                driver.PaintingKit = LoadPaintingKit.Perform(driver);
             }
             else
             {
                 SaveClock.Perform();
                 SaveSewingKit.Perform();
+                SavePaintingKit.Perform();
             }
         }
     }

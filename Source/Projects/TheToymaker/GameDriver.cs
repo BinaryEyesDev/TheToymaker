@@ -40,6 +40,7 @@ namespace TheToymaker
         //Background Elements
         public DeskClock Clock;
         public SewingKit SewingKit;
+        public PaintingKit PaintingKit;
         public Customer Customer;
 
         public GameDriver ChangeState(GameState next)
@@ -105,10 +106,12 @@ namespace TheToymaker
             SpriteBatch.DrawSprite(GameInterface.ToyLocationOnTable, GameInterface.Square);
             SpriteBatch.DrawSprite(GameInterface.ToyLocationInFront, GameInterface.Square);
             SpriteBatch.DrawSprite(GameInterface.CustomerLocation, GameInterface.Square);
+            SpriteBatch.DrawSprite(GameInterface.SpeechLocation, GameInterface.Square);
 
             SpriteBatch.DrawSprite(Clock.HourHandTransform, Clock.HourHandSprite);
             SpriteBatch.DrawSprite(Clock.MinuteHandTransform, Clock.MinuteHandSprite);
             SpriteBatch.DrawSprite(SewingKit.Transform, SewingKit.Sprite);
+            SpriteBatch.DrawSprite(PaintingKit.Transform, PaintingKit.Sprite);
             SpriteBatch.DrawSprite(Customer.Transform, Customer.Sprite);
             SpriteBatch.End();
 

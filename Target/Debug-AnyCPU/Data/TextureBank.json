@@ -15,5 +15,7 @@
     "Pliers": "Textures\\Tools\\Pliers_000",
     "Needle": "Textures\\Tools\\NeedleAndThread_000",
     "SewingKit": "Textures\\Tools\\SewingKit_000",
+    "PaintingKit": "Textures\\Tools\\PaintKit_000",
+    "Paintbrush": "Textures\\Tools\\Paintbrush_000",
     "Customer_000": "Textures\\Customers\\FakeCustomer",
 }

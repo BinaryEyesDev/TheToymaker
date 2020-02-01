@@ -40,6 +40,7 @@ namespace TheToymaker
                 driver.Toys = LoadToys.Perform(driver);
                 driver.Clock = DeskClock.Initialize(driver);
                 driver.SewingKit = SewingKit.Initialize(driver);
+                driver.PaintingKit = PaintingKit.Initialize(driver);
                 driver.Customer = Customer.Initialize(driver);
 
                 DebugMonitor.Initialize(driver);
