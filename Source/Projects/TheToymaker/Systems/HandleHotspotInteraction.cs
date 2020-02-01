@@ -1,15 +1,17 @@
-﻿using Discord.Logging;
+﻿using System.Linq;
+using Discord.Logging;
 using Microsoft.Xna.Framework;
 using TheToymaker.Data;
 
 namespace TheToymaker.Systems
 {
-    public static class UpdateHotspots
+    public static class HandleHotspotInteraction
     {
         public static Vector2 StartPosition;
         public static Hotspot Current;
+        public static Vector2 CurrentPosition => Current.Transform.Position;
 
-        public static void HandleHotspotInteraction(GameDriver driver)
+        public static void Perform(GameDriver driver)
         {
             if (driver.EditingMode)
                 return;
@@ -31,6 +33,31 @@ namespace TheToymaker.Systems
             }
 
             Current.Transform.Position = MouseInput.WorldPosition;
+            var toolPosition = new Vector3(CurrentPosition.X, CurrentPosition.Y, 0.0f);
+            var toolMin = Current.BoundingBox.Min + toolPosition;
+            var toolMax = Current.BoundingBox.Max + toolPosition;
+            var toolBounds = new BoundingBox(toolMin, toolMax);
+
+            foreach (var toy in GameDriver.Instance.Toys)
+            {
+                foreach (var damageModel in toy.DamagePoints.Where(element => element.Active))
+                {
+                    var pointTransform = damageModel.GetGlobalTransform();
+                    var pointCenter = new Vector3(pointTransform.Position.X, pointTransform.Position.Y, 0.0f);
+                    
+                    var pointMin = pointCenter + new Vector3(-20.0f, -20.0f, 0.0f);
+                    var pointMax = pointCenter + new Vector3(+20.0f, +20.0f, 0.0f);
+                    var pointBounds = new BoundingBox(pointMin, pointMax);
+
+                    if (!toolBounds.Intersects(pointBounds))
+                        continue;
+
+                    if (Current.DamageTarget != damageModel.Type)
+                        continue;
+
+                    damageModel.Active = false;
+                }
+            }
         }
 
         private static void WaitForPlayerToPickupTool(GameDriver driver)
@@ -53,7 +80,10 @@ namespace TheToymaker.Systems
                 hotspot.DebugSprite.Tint = containsMouse ? new Color(0.1f, 1.0f, 0.1f, 0.25f) : new Color(1.0f, 1.0f, 1.0f, 0.25f);
                 if (!containsMouse)
                     continue;
-                
+
+                if (string.IsNullOrEmpty(hotspot.DamageTarget))
+                    continue;
+
                 Log.Debug($"Hotspot Pressed: {hotspot.Name}");
                 Current = hotspot;
                 StartPosition = transform.Position;

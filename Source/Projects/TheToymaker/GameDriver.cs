@@ -50,7 +50,7 @@ namespace TheToymaker
             RefreshToysState.Perform(this);
             RefreshDeskClockState.Perform(this);
             EditingMouseGrab.Perform(this);
-            UpdateHotspots.HandleHotspotInteraction(this);
+            HandleHotspotInteraction.Perform(this);
 
             Clock.Update(frameTime);
             GameCamera.Update(GraphicsDevice.Viewport);
