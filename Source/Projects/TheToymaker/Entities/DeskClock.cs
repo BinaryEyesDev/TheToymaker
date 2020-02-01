@@ -8,6 +8,7 @@ namespace TheToymaker.Entities
     [Serializable]
     public class DeskClock
     {
+        public int Time;
         public float Rate;
         public Transform2D HourHandTransform;
         public Sprite HourHandSprite;
@@ -35,6 +36,10 @@ namespace TheToymaker.Entities
         {
             if (MinuteHandTransform.Angle <= 360.0f)
                 return;
+
+            Time += 1;
+            if (Time > 24)
+                Time -= 24;
 
             MinuteHandTransform.Angle -= 360.0f;
             HourHandTransform.Angle += 30.0f;

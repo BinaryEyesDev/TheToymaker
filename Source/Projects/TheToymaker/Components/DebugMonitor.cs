@@ -25,11 +25,13 @@ namespace TheToymaker.Components
             var showHotspots = GameDriver.Instance.ShowHotspotBox ? "Visible" : "Hidden";
 
             _spriteBatch.Begin();
-            _spriteBatch.DrawString(_font, $"TimeScale: {GameDriver.Instance.TimeScale}", new Vector2(10.0f, 10.0f), Color.White);
-            _spriteBatch.DrawString(_font, $"Mouse Screen Position: {MouseInput.ScreenPosition}", new Vector2(10.0f, 30.0f), Color.White);
-            _spriteBatch.DrawString(_font, $"Mouse World Position: {MouseInput.WorldPosition}", new Vector2(10.0f, 50.0f), Color.White);
-            _spriteBatch.DrawString(_font, $"Editing Mode: {editModeState}", new Vector2(10.0f, 70.0f), Color.White);
-            _spriteBatch.DrawString(_font, $"Hotspot Boxes: {showHotspots}", new Vector2(10.0f, 90.0f), Color.White);
+            //_spriteBatch.DrawString(_font, $"TimeScale: {GameDriver.Instance.TimeScale}", new Vector2(10.0f, 10.0f), Color.White);
+            //_spriteBatch.DrawString(_font, $"Mouse Screen Position: {MouseInput.ScreenPosition}", new Vector2(10.0f, 30.0f), Color.White);
+            //_spriteBatch.DrawString(_font, $"Mouse World Position: {MouseInput.WorldPosition}", new Vector2(10.0f, 50.0f), Color.White);
+            _spriteBatch.DrawString(_font, $"Editing Mode: {editModeState}", new Vector2(10.0f, 5.0f), Color.White);
+            _spriteBatch.DrawString(_font, $"Hotspot Boxes: {showHotspots}", new Vector2(10.0f, 25.0f), Color.White);
+            _spriteBatch.DrawString(_font, $"Time: {GameDriver.Instance.Clock.Time}", new Vector2(10.0f, 45.0f), Color.White);
+
             _spriteBatch.End();
         }
 

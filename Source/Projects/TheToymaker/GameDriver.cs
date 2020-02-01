@@ -21,7 +21,7 @@ namespace TheToymaker
 
         public bool Fullscreen = false;
         public bool EditingMode = false;
-        public bool ShowHotspotBox = true;
+        public bool ShowHotspotBox = false;
         public float TimeScale;
         public Color BackgroundColor;
         public GraphicsDeviceManager Graphics;
@@ -110,14 +110,17 @@ namespace TheToymaker
             foreach (var toy in Toys.Where(element => element.Active))
                 SpriteBatch.DrawToy(toy);
 
-            SpriteBatch.DrawSprite(GameInterface.TableTransform, GameInterface.TableSprite);
-            SpriteBatch.DrawSprite(GameInterface.ToyLocationOnTable, GameInterface.Square);
-            SpriteBatch.DrawSprite(GameInterface.ToyLocationInFront, GameInterface.Square);
-            SpriteBatch.DrawSprite(GameInterface.CustomerLocation, GameInterface.Square);
-            SpriteBatch.DrawSprite(GameInterface.SpeechLocation, GameInterface.Square);
-            SpriteBatch.DrawSprite(GameInterface.MoneyLocation, GameInterface.Square);
+            if (EditingMode)
+            {
+                SpriteBatch.DrawSprite(GameInterface.ToyLocationOnTable, GameInterface.Square);
+                SpriteBatch.DrawSprite(GameInterface.ToyLocationInFront, GameInterface.Square);
+                SpriteBatch.DrawSprite(GameInterface.CustomerLocation, GameInterface.Square);
+                SpriteBatch.DrawSprite(GameInterface.SpeechLocation, GameInterface.Square);
+                SpriteBatch.DrawSprite(GameInterface.MoneyLocation, GameInterface.Square);
+            }
 
             SpriteBatch.DrawMoney(Money);
+            SpriteBatch.DrawSprite(GameInterface.TableTransform, GameInterface.TableSprite);
             SpriteBatch.DrawSprite(Clock.HourHandTransform, Clock.HourHandSprite);
             SpriteBatch.DrawSprite(Clock.MinuteHandTransform, Clock.MinuteHandSprite);
             SpriteBatch.DrawSprite(SewingKit.Transform, SewingKit.Sprite);

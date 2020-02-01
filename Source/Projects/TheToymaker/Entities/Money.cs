@@ -38,14 +38,12 @@ namespace TheToymaker.Entities
             var center = GameDriver.Instance.GameInterface.MoneyLocation.Position;
             var transform = new Transform2D
             {
-                Angle = GetRandom.Float(0.0f, 359.0f),
+                Angle = GetRandom.Float(-15.0f, 15.0f),
                 Position = new Vector2(
                     GetRandom.Float(center.X, -10.0f, +10.0f),
                     GetRandom.Float(center.Y, -10.0f, +10.0f)),
 
-                Scale = new Vector2(
-                    GetRandom.Float(0.2f, -0.05f, +0.05f),
-                    GetRandom.Float(0.2f, -0.05f, +0.05f)),
+                Scale = new Vector2(0.2f, 0.15f),
             };
 
             Transforms.Add(transform);
