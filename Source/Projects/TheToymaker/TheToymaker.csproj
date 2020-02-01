@@ -71,12 +71,14 @@
     <Compile Include="Entities\DeskClock.cs" />
     <Compile Include="Entities\GameInterface.cs" />
     <Compile Include="Entities\Money.cs" />
-    <Compile Include="Entities\SewingKit - Copy.cs" />
+    <Compile Include="Entities\PhoneMachine.cs" />
     <Compile Include="Entities\SewingKit.cs" />
+    <Compile Include="Entities\PaintingKit.cs" />
     <Compile Include="Entities\ShopBackground.cs" />
     <Compile Include="Entities\Table.cs" />
     <Compile Include="Entities\Toy.cs" />
     <Compile Include="Events\GameStateChanged.cs" />
+    <Compile Include="Events\HotspotClicked.cs" />
     <Compile Include="Extensions\ListExtensions.cs" />
     <Compile Include="Extensions\SpriteBatchExtensions.cs" />
     <Compile Include="GameSystem.cs" />

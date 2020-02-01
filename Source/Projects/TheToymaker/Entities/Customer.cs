@@ -6,6 +6,7 @@ namespace TheToymaker.Entities
 {
     public class Customer
     {
+        public StateType State;
         public Sprite Sprite;
         public Transform2D Transform;
 
@@ -13,6 +14,7 @@ namespace TheToymaker.Entities
         {
             return new Customer
             {
+                State = StateType.Waiting,
                 Transform = Transform2D.Identity,
                 Sprite = new Sprite
                 {
@@ -23,6 +25,16 @@ namespace TheToymaker.Entities
                     Effects = SpriteEffects.None,
                 },
             };
+        }
+
+        public enum StateType
+        {
+            Waiting,
+            Happy,
+            Sad,
+            Angry,
+            Bored,
+            Impatient,
         }
     }
 }

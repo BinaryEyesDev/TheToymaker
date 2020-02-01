@@ -1,0 +1,165 @@
+{
+  "Active": false,
+  "LargeSprite": {
+    "ImageId": "Doll_Fabric_002",
+    "Tint": {
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 255
+    },
+    "Layer": 0.5,
+    "Pivot": "0.5, 0.5",
+    "Effects": 0
+  },
+  "DamagePoints": [
+    {
+      "Active": true,
+      "Type": "BurstSeam",
+      "Transform": {
+        "Position": "232.499939, -34.49998",
+        "Scale": "1, 1",
+        "Angle": 0.0
+      },
+      "Sprite": {
+        "ImageId": "Cuts_Doll_Fabric_001a",
+        "Tint": {
+          "B": 255,
+          "G": 255,
+          "R": 255,
+          "A": 255
+        },
+        "Layer": 0.6,
+        "Pivot": "0.5, 0.5",
+        "Effects": 0
+      }
+    },
+    {
+      "Active": true,
+      "Type": "BurstSeam",
+      "Transform": {
+        "Position": "-21.000061, -382.499939",
+        "Scale": "1, 1",
+        "Angle": 0.0
+      },
+      "Sprite": {
+        "ImageId": "Cuts_Doll_Fabric_001b",
+        "Tint": {
+          "B": 255,
+          "G": 255,
+          "R": 255,
+          "A": 255
+        },
+        "Layer": 0.6,
+        "Pivot": "0.5, 0.5",
+        "Effects": 0
+      }
+    },
+    {
+      "Active": true,
+      "Type": "BurstSeam",
+      "Transform": {
+        "Position": "46.49994, 183",
+        "Scale": "1, 1",
+        "Angle": 0.0
+      },
+      "Sprite": {
+        "ImageId": "Cuts_Doll_Fabric_001c",
+        "Tint": {
+          "B": 255,
+          "G": 255,
+          "R": 255,
+          "A": 255
+        },
+        "Layer": 0.6,
+        "Pivot": "0.5, 0.5",
+        "Effects": 0
+      }
+    },
+    {
+      "Active": true,
+      "Type": "BurstSeam",
+      "Transform": {
+        "Position": "67.49994, 390",
+        "Scale": "1, 1",
+        "Angle": 0.0
+      },
+      "Sprite": {
+        "ImageId": "Cuts_Doll_Fabric_001d",
+        "Tint": {
+          "B": 255,
+          "G": 255,
+          "R": 255,
+          "A": 255
+        },
+        "Layer": 0.6,
+        "Pivot": "0.5, 0.5",
+        "Effects": 0
+      }
+    },
+    {
+      "Active": true,
+      "Type": "Nail",
+      "Transform": {
+        "Position": "-64.50006, 151.5",
+        "Scale": "1, 1",
+        "Angle": 0.0
+      },
+      "Sprite": {
+        "ImageId": "Nail_Doll_Fabric_001a",
+        "Tint": {
+          "B": 255,
+          "G": 255,
+          "R": 255,
+          "A": 255
+        },
+        "Layer": 0.6,
+        "Pivot": "0.5, 0.5",
+        "Effects": 0
+      }
+    },
+    {
+      "Active": true,
+      "Type": "WashedOutPaint",
+      "Transform": {
+        "Position": "-30.000061, -340.499969",
+        "Scale": "1, 1",
+        "Angle": 0.0
+      },
+      "Sprite": {
+        "ImageId": "MissingPaint_Doll_Fabric_001a",
+        "Tint": {
+          "B": 255,
+          "G": 255,
+          "R": 255,
+          "A": 255
+        },
+        "Layer": 0.6,
+        "Pivot": "0.5, 0.5",
+        "Effects": 0
+      }
+    },
+    {
+      "Active": true,
+      "Type": "WashedOutPaint",
+      "Transform": {
+        "Position": "98.99994, -319.499969",
+        "Scale": "1, 1",
+        "Angle": 0.0
+      },
+      "Sprite": {
+        "ImageId": "MissingPaint_Doll_Fabric_001a",
+        "Tint": {
+          "B": 255,
+          "G": 255,
+          "R": 255,
+          "A": 255
+        },
+        "Layer": 0.6,
+        "Pivot": "0.5, 0.5",
+        "Effects": 0
+      }
+    }
+  ],
+  "IsFixed": false
+}

@@ -36,6 +36,7 @@ namespace TheToymaker
         public ShopBackground ShopBackground;
 
         //Gameplay
+        public PhoneMachine Phone;
         public Money Money;
         public List<Hotspot> HotSpots;
         public List<Toy> Toys;
@@ -134,6 +135,9 @@ namespace TheToymaker
             SpriteBatch.DrawSprite(Clock.MinuteHandTransform, Clock.MinuteHandSprite);
             SpriteBatch.DrawSprite(SewingKit.Transform, SewingKit.Sprite);
             SpriteBatch.DrawSprite(PaintingKit.Transform, PaintingKit.Sprite);
+
+            if (Phone.State == PhoneMachine.StateType.Talking)
+                SpriteBatch.DrawSprite(GameInterface.PhoneSpeechLocation, GameInterface.SpeechSprite);
 
             if (State != GameState.WaitingForClient && State != GameState.ClientLeaving)
                 SpriteBatch.DrawSprite(Customer.Transform, Customer.Sprite);

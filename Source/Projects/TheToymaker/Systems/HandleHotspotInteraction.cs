@@ -1,7 +1,9 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Discord.Logging;
 using Microsoft.Xna.Framework;
 using TheToymaker.Data;
+using TheToymaker.Events;
 using TheToymaker.Utilities;
 
 namespace TheToymaker.Systems
@@ -11,6 +13,7 @@ namespace TheToymaker.Systems
         public static Vector2 StartPosition;
         public static Hotspot Current;
         public static Vector2 CurrentPosition => Current.Transform.Position;
+        public static event EventHandler<HotspotClicked> Clicked;
 
         public static void SendCurrentToolToStart()
         {
@@ -92,6 +95,7 @@ namespace TheToymaker.Systems
                 if (!containsMouse)
                     continue;
 
+                Clicked?.Invoke(null, new HotspotClicked(hotspot));
                 if (string.IsNullOrEmpty(hotspot.DamageTarget))
                     continue;
 

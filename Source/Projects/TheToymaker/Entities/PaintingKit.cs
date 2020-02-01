@@ -5,15 +5,15 @@ using TheToymaker.Utilities;
 namespace TheToymaker.Entities
 {
     [Serializable]
-    public class SewingKit
+    public class PaintingKit
     {
         public Transform2D Transform;
         public Sprite Sprite;
 
-        public static SewingKit Initialize(GameDriver driver)
+        public static PaintingKit Initialize(GameDriver driver)
         {
-            var path = DataPath.Get("Elements\\SewingKit.json");
-            return JsonData.DeserializeFromFile<SewingKit>(path);
+            var path = DataPath.Get("Elements\\PaintingKit.json");
+            return JsonData.DeserializeFromFile<PaintingKit>(path);
         }
     }
 }

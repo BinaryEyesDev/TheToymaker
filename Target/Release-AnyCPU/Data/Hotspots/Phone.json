@@ -1,0 +1,37 @@
+{
+  "Transform": {
+    "Position": "-770.999939, 301.5",
+    "Scale": "0.75, 0.75",
+    "Angle": 0.0
+  },
+  "DebugSprite": {
+    "ImageId": "Square",
+    "Tint": {
+      "B": 25,
+      "G": 255,
+      "R": 25,
+      "A": 63
+    },
+    "Layer": 0.9,
+    "Pivot": "0.5, 0.5",
+    "Effects": 0
+  },
+  "Sprite": {
+    "ImageId": "PhoneMachine",
+    "Tint": {
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 255
+    },
+    "Layer": 0.7,
+    "Pivot": "0.5, 0.5",
+    "Effects": 0
+  },
+  "BoundingBox": {
+    "Min": "-130, -100, 0",
+    "Max": "130, 100, 0"
+  },
+  "DamageTarget": "",
+  "ActivationTime": 15.0
+}

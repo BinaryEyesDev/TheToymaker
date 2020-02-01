@@ -1,0 +1,37 @@
+{
+  "Transform": {
+    "Position": "-315, 165",
+    "Scale": "0.25, 0.25",
+    "Angle": 80.0
+  },
+  "DebugSprite": {
+    "ImageId": "Square",
+    "Tint": {
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 63
+    },
+    "Layer": 0.9,
+    "Pivot": "0.5, 0.5",
+    "Effects": 0
+  },
+  "Sprite": {
+    "ImageId": "Pliers",
+    "Tint": {
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 255
+    },
+    "Layer": 0.7,
+    "Pivot": "0.5, 0.5",
+    "Effects": 0
+  },
+  "BoundingBox": {
+    "Min": "-30, -80, 0",
+    "Max": "30, 80, 0"
+  },
+  "DamageTarget": "Nail",
+  "ActivationTime": 15.0
+}

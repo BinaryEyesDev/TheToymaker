@@ -25,7 +25,4 @@
     "PhoneMachine": "Textures\\Game\\PhoneMachine",
     "Customer_000": "Textures\\Customers\\FakeCustomer",
     "Customer_001": "Textures\\Game\\Customer_001",
-    "HappyFace": "Textures\\Icons\\Emoji_Happy",
-    "SadFace": "Textures\\Icons\\Emoji_Sad",
-    "AngryFace": "Textures\\Icons\\Emoji_Angry",
 }

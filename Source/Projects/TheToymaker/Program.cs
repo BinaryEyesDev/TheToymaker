@@ -37,6 +37,7 @@ namespace TheToymaker
                 driver.GameCamera = GenerateGameCamera(driver);
                 driver.GameInterface = GameInterface.Initialize(driver);
                 driver.ShopBackground = ShopBackground.Initialize(driver);
+                driver.Phone = PhoneMachine.Initialize(driver);
                 driver.Money = Money.Initialize(driver);
                 driver.HotSpots = LoadHotSpots.Perform(driver);
                 driver.Toys = LoadToys.Perform(driver);
