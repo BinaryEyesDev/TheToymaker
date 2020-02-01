@@ -14,7 +14,6 @@ namespace TheToymaker.Systems
             foreach (var hotspot in driver.HotSpots)
             {
                 var transform = hotspot.Transform;
-                var scale = new Vector3(transform.Scale.X, transform.Scale.Y, 1.0f);
                 var position = new Vector3(transform.Position.X, transform.Position.Y, 0.0f);
 
                 var boundingMin = hotspot.BoundingBox.Min + position;

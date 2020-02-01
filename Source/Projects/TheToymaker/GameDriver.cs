@@ -18,6 +18,7 @@ namespace TheToymaker
 
         public bool Fullscreen = false;
         public bool EditingMode = false;
+        public bool ShowHotspotBox = true;
         public float TimeScale;
         public Color BackgroundColor;
         public GraphicsDeviceManager Graphics;
@@ -39,6 +40,7 @@ namespace TheToymaker
             KeyInput.Update(keyState);
             MouseInput.Update();
 
+            ToggleHotspotBoxes.Perform(this);
             ToggleQuitGame.Perform(this);
             ToggleFullscreen.Perform(this);
             ToggleEditingMode.Perform(this);

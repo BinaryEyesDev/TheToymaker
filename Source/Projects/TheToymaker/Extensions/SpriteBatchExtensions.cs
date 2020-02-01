@@ -32,11 +32,14 @@ namespace TheToymaker.Extensions
         {
             var scale = spot.Transform.Scale;
 
-            var boundingBox = spot.BoundingBox;
-            var width = Math.Abs(boundingBox.Max.X - boundingBox.Min.X);
-            var height = Math.Abs(boundingBox.Max.Y - boundingBox.Min.Y);
-            spot.Transform.Scale = new Vector2(width, height);
-            batch.DrawSprite(spot.Transform, spot.DebugSprite);
+            if (GameDriver.Instance.ShowHotspotBox)
+            {
+                var boundingBox = spot.BoundingBox;
+                var width = Math.Abs(boundingBox.Max.X - boundingBox.Min.X);
+                var height = Math.Abs(boundingBox.Max.Y - boundingBox.Min.Y);
+                spot.Transform.Scale = new Vector2(width, height);
+                batch.DrawSprite(spot.Transform, spot.DebugSprite);
+            }
 
             spot.Transform.Scale = scale;
             if (!string.IsNullOrEmpty(spot.Sprite.ImageId))

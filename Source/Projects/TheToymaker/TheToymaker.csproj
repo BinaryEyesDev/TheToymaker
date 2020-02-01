@@ -82,6 +82,7 @@
     <Compile Include="Systems\RefreshToysState.cs" />
     <Compile Include="Systems\ToggleEditingMode.cs" />
     <Compile Include="Systems\ToggleFullScreen.cs" />
+    <Compile Include="Systems\ToggleHotspotBoxes.cs" />
     <Compile Include="Systems\ToggleQuitGame.cs" />
     <Compile Include="Systems\UpdateHotspots.cs" />
     <Compile Include="Utilities\CalculateKeyboardDirection.cs" />
