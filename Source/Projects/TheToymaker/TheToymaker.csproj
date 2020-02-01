@@ -62,6 +62,7 @@
     <Compile Include="Components\ToyDamagePoint.cs" />
     <Compile Include="Data\FrameInput.cs" />
     <Compile Include="Data\FrameTime.cs" />
+    <Compile Include="Data\GameState.cs" />
     <Compile Include="Data\Hotspot.cs" />
     <Compile Include="Data\MouseInput.cs" />
     <Compile Include="Data\StringConfiguration.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Entities\GameInterface.cs" />
     <Compile Include="Entities\Table.cs" />
     <Compile Include="Entities\Toy.cs" />
+    <Compile Include="Events\GameStateChanged.cs" />
     <Compile Include="Extensions\SpriteBatchExtensions.cs" />
     <Compile Include="GameSystem.cs" />
     <Compile Include="Program.cs" />

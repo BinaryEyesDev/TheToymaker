@@ -2,6 +2,7 @@
 using Discord.Logging;
 using Microsoft.Xna.Framework;
 using TheToymaker.Data;
+using TheToymaker.Utilities;
 
 namespace TheToymaker.Systems
 {
@@ -56,6 +57,8 @@ namespace TheToymaker.Systems
                         continue;
 
                     damageModel.Active = false;
+                    var timeSpent = GetRandom.Float(Current.ActivationTime, -5.0f, +5.0f);
+                    GameDriver.Instance.Clock.AddMinutes(timeSpent);
                 }
             }
         }

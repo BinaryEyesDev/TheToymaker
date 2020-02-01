@@ -1,7 +1,7 @@
 {
   "Transform": {
-    "Position": "-614.999939, 229.5",
-    "Scale": "0.5, 0.5",
+    "Position": "-749.999939, 378",
+    "Scale": "1, 1",
     "Angle": 0.0
   },
   "DebugSprite": {
@@ -29,9 +29,9 @@
     "Effects": 0
   },
   "BoundingBox": {
-    "Min": "-20, -20, 0",
-    "Max": "20, 20, 0"
+    "Min": "-30, -30, 0",
+    "Max": "30, 30, 0"
   },
-  "DamageTarget": "BurstSeam",
+  "DamageTarget": "Nail",
   "ActivationTime": 15.0
 }

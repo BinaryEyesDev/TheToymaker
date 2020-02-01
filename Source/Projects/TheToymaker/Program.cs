@@ -25,6 +25,7 @@ namespace TheToymaker
             
             using (var driver = new GameDriver())
             {
+                driver.ChangeState(GameState.Initializing);
                 driver.IsMouseVisible = true;
                 driver.Content.RootDirectory = "Content";
                 driver.BackgroundColor = Color.CornflowerBlue;
@@ -40,6 +41,8 @@ namespace TheToymaker
                 driver.Clock = DeskClock.Initialize(driver);
 
                 DebugMonitor.Initialize(driver);
+
+                driver.ChangeState(GameState.SplashScreen).ChangeState(GameState.WaitingForClient);
                 driver.Run();
             }
 

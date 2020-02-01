@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -6,6 +7,7 @@ using Microsoft.Xna.Framework.Input;
 using TheToymaker.Components;
 using TheToymaker.Data;
 using TheToymaker.Entities;
+using TheToymaker.Events;
 using TheToymaker.Extensions;
 using TheToymaker.Systems;
 
@@ -15,6 +17,7 @@ namespace TheToymaker
         : Game
     {
         public static GameDriver Instance { get; private set; }
+        public event EventHandler<GameStateChanged> StateChanged; 
 
         public bool Fullscreen = false;
         public bool EditingMode = false;
@@ -23,6 +26,7 @@ namespace TheToymaker
         public Color BackgroundColor;
         public GraphicsDeviceManager Graphics;
         public TextureBank TextureBank;
+        public GameState State;
 
         //Game
         public SpriteBatch SpriteBatch;
@@ -32,6 +36,14 @@ namespace TheToymaker
         public List<Toy> Toys;
         public DeskClock Clock;
 
+        public GameDriver ChangeState(GameState next)
+        {
+            var previous = State;
+            State = next;
+            StateChanged?.Invoke(this, new GameStateChanged(previous, next));
+            return this;
+        }
+
         protected override void Update(GameTime time)
         {
             var elapsed = (float)time.ElapsedGameTime.TotalSeconds;
@@ -40,7 +52,6 @@ namespace TheToymaker
             var keyState = Keyboard.GetState();
             KeyInput.Update(keyState);
             MouseInput.Update();
-
             ToggleHotspotBoxes.Perform(this);
             ToggleQuitGame.Perform(this);
             ToggleFullscreen.Perform(this);
@@ -50,7 +61,9 @@ namespace TheToymaker
             RefreshToysState.Perform(this);
             RefreshDeskClockState.Perform(this);
             EditingMouseGrab.Perform(this);
+            
             HandleHotspotInteraction.Perform(this);
+
 
             Clock.Update(frameTime);
             GameCamera.Update(GraphicsDevice.Viewport);

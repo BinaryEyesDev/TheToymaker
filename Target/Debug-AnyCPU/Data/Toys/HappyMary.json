@@ -117,6 +117,48 @@
         "Pivot": "0.5, 0.5",
         "Effects": 0
       }
+    },
+    {
+      "Active": true,
+      "Type": "WashedOutPaint",
+      "Transform": {
+        "Position": "-30.000061, -340.499969",
+        "Scale": "1, 1",
+        "Angle": 0.0
+      },
+      "Sprite": {
+        "ImageId": "MissingPaint_Doll_Fabric_001a",
+        "Tint": {
+          "B": 255,
+          "G": 255,
+          "R": 255,
+          "A": 255
+        },
+        "Layer": 0.6,
+        "Pivot": "0.5, 0.5",
+        "Effects": 0
+      }
+    },
+    {
+      "Active": true,
+      "Type": "WashedOutPaint",
+      "Transform": {
+        "Position": "95.99994, -317.999969",
+        "Scale": "1, 1",
+        "Angle": 0.0
+      },
+      "Sprite": {
+        "ImageId": "MissingPaint_Doll_Fabric_001a",
+        "Tint": {
+          "B": 255,
+          "G": 255,
+          "R": 255,
+          "A": 255
+        },
+        "Layer": 0.6,
+        "Pivot": "0.5, 0.5",
+        "Effects": 0
+      }
     }
   ]
 }

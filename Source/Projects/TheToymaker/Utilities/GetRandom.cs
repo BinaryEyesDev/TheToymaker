@@ -4,6 +4,11 @@ namespace TheToymaker.Utilities
 {
     public static class GetRandom
     {
+        public static float Float(float baseValue, float min, float max)
+        {
+            return baseValue + Float(min, max);
+        }
+
         public static float Float(float min, float max)
         {
             var range = max - min;
