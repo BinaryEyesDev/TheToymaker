@@ -26,12 +26,15 @@ namespace TheToymaker
         public Color BackgroundColor;
         public GraphicsDeviceManager Graphics;
         public TextureBank TextureBank;
-        public GameState State;
 
         //Game
+        public GameState State;
         public SpriteBatch SpriteBatch;
         public Camera2D GameCamera;
         public GameInterface GameInterface;
+
+        //Gameplay
+        public Money Money;
         public List<Hotspot> HotSpots;
         public List<Toy> Toys;
         public Toy CurrentToy;
@@ -80,6 +83,11 @@ namespace TheToymaker
                 ResolveCurrentToy.Perform(this);
             }
 
+            if (State == GameState.ClientPayment)
+            {
+                HandlePaymentProcess.Perform(this);
+            }
+
             if (State == GameState.ClientLeaving)
             {
                 ChangeState(GameState.WaitingForClient);
@@ -94,7 +102,7 @@ namespace TheToymaker
         protected override void Draw(GameTime time)
         {
             GraphicsDevice.Clear(BackgroundColor);
-            SpriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.NonPremultiplied, null, null, null, null, GameCamera.Transformation);
+            SpriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.NonPremultiplied, SamplerState.PointClamp, null, null, null, GameCamera.Transformation);
 
             foreach (var hotspot in HotSpots)
                 SpriteBatch.DrawHotspot(hotspot);
@@ -107,7 +115,9 @@ namespace TheToymaker
             SpriteBatch.DrawSprite(GameInterface.ToyLocationInFront, GameInterface.Square);
             SpriteBatch.DrawSprite(GameInterface.CustomerLocation, GameInterface.Square);
             SpriteBatch.DrawSprite(GameInterface.SpeechLocation, GameInterface.Square);
+            SpriteBatch.DrawSprite(GameInterface.MoneyLocation, GameInterface.Square);
 
+            SpriteBatch.DrawMoney(Money);
             SpriteBatch.DrawSprite(Clock.HourHandTransform, Clock.HourHandSprite);
             SpriteBatch.DrawSprite(Clock.MinuteHandTransform, Clock.MinuteHandSprite);
             SpriteBatch.DrawSprite(SewingKit.Transform, SewingKit.Sprite);

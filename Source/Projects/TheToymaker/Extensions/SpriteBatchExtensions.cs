@@ -10,6 +10,16 @@ namespace TheToymaker.Extensions
 {
     public static class SpriteBatchExtensions
     {
+        public static void DrawMoney(this SpriteBatch batch, Money money)
+        {
+            money.Sprite.Layer = 0.55f;
+            foreach (var transform in money.Transforms)
+            {
+                money.Sprite.Layer += 0.001f;
+                batch.DrawSprite(transform, money.Sprite);
+            }
+        }
+
         public static void DrawToy(this SpriteBatch batch, Toy toy)
         {
             var ui = GameDriver.Instance.GameInterface;

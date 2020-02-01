@@ -70,6 +70,7 @@
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\DeskClock.cs" />
     <Compile Include="Entities\GameInterface.cs" />
+    <Compile Include="Entities\Money.cs" />
     <Compile Include="Entities\SewingKit - Copy.cs" />
     <Compile Include="Entities\SewingKit.cs" />
     <Compile Include="Entities\Table.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="GameDriver.cs" />
     <Compile Include="Systems\EditingMouseGrab.cs" />
     <Compile Include="Systems\GenerateNewCustomer.cs" />
+    <Compile Include="Systems\HandlePaymentProcess.cs" />
     <Compile Include="Systems\RefreshBackgroundElements.cs" />
     <Compile Include="Systems\ReloadGameInterface.cs" />
     <Compile Include="Systems\RefreshHotspotsState.cs" />

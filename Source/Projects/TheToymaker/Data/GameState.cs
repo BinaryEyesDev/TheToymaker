@@ -7,6 +7,7 @@
         SplashScreen,
         WaitingForClient,
         FixingToy,
+        ClientPayment,
         ClientLeaving,
         EndOfDay,
     }

@@ -47,5 +47,10 @@
     "Position": "-50, -300",
     "Scale": "5.0, 5.0",
     "Angle": 0.0
+  },
+  "MoneyLocation": {
+    "Position": "80, 375",
+    "Scale": "5.0, 5.0",
+    "Angle": 0.0
   }
 }

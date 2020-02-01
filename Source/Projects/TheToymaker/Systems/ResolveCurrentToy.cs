@@ -11,7 +11,8 @@ namespace TheToymaker.Systems
                 return;
 
             currentToy.Active = false;
-            driver.ChangeState(GameState.ClientLeaving);
+            HandleHotspotInteraction.SendCurrentToolToStart();
+            driver.ChangeState(GameState.ClientPayment);
         }
     }
 }

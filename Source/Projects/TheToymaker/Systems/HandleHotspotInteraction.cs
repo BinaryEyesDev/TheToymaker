@@ -12,6 +12,15 @@ namespace TheToymaker.Systems
         public static Hotspot Current;
         public static Vector2 CurrentPosition => Current.Transform.Position;
 
+        public static void SendCurrentToolToStart()
+        {
+            if (Current == null)
+                return;
+
+            Current.Transform.Position = StartPosition;
+            Current = null;
+        }
+
         public static void Perform(GameDriver driver)
         {
             if (driver.EditingMode)
@@ -28,8 +37,7 @@ namespace TheToymaker.Systems
             if (MouseInput.LeftButtonJustReleased)
             {
                 Log.Message($"Released: Hotspot: {Current.Name}");
-                Current.Transform.Position = StartPosition;
-                Current = null;
+                SendCurrentToolToStart();
                 return;
             }
 
@@ -59,7 +67,6 @@ namespace TheToymaker.Systems
                     damageModel.Active = false;
                     var timeSpent = GetRandom.Float(Current.ActivationTime, -5.0f, +5.0f);
                     GameDriver.Instance.Clock.AddMinutes(timeSpent);
-                    
                 }
             }
         }
