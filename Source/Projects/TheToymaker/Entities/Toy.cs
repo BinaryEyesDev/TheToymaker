@@ -7,11 +7,10 @@ namespace TheToymaker.Entities
     [Serializable]
     public class Toy
     {
+        [NonSerialized] public string Name;
         public bool Active;
         public Sprite LargeSprite;
         public List<ToyDamagePoint> DamagePoints;
-
-        [NonSerialized]
-        public string Name;
+        public bool IsFixed => DamagePoints.TrueForAll(element => !element.Active);
     }
 }

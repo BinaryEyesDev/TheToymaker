@@ -59,6 +59,7 @@ namespace TheToymaker.Systems
                     damageModel.Active = false;
                     var timeSpent = GetRandom.Float(Current.ActivationTime, -5.0f, +5.0f);
                     GameDriver.Instance.Clock.AddMinutes(timeSpent);
+                    
                 }
             }
         }

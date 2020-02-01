@@ -35,6 +35,7 @@ namespace TheToymaker
         public List<Hotspot> HotSpots;
         public List<Toy> Toys;
         public DeskClock Clock;
+        public Toy CurrentToy;
 
         public GameDriver ChangeState(GameState next)
         {
@@ -61,9 +62,22 @@ namespace TheToymaker
             RefreshToysState.Perform(this);
             RefreshDeskClockState.Perform(this);
             EditingMouseGrab.Perform(this);
-            
-            HandleHotspotInteraction.Perform(this);
 
+            if (State == GameState.WaitingForClient)
+            {
+                GenerateNewCustomer.Perform(this);
+            }
+
+            if (State == GameState.FixingToy)
+            {
+                HandleHotspotInteraction.Perform(this);
+                ResolveCurrentToy.Perform(this);
+            }
+
+            if (State == GameState.ClientLeaving)
+            {
+
+            }
 
             Clock.Update(frameTime);
             GameCamera.Update(GraphicsDevice.Viewport);
