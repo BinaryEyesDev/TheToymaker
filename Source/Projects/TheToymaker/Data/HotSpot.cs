@@ -11,6 +11,8 @@ namespace TheToymaker.Data
         public Sprite DebugSprite;
         public Sprite Sprite;
         public BoundingBox BoundingBox;
+        public string DamageTarget;
+        public float ActivationTime;
 
         [NonSerialized]
         public string Name;

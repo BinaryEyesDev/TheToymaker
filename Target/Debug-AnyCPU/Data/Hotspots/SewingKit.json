@@ -1,7 +1,7 @@
 {
   "Transform": {
-    "Position": "106.499977, 387",
-    "Scale": "1, 1",
+    "Position": "-656.999939, 352.5",
+    "Scale": "0.5, 0.5",
     "Angle": 0.0
   },
   "DebugSprite": {
@@ -12,7 +12,7 @@
       "R": 255,
       "A": 63
     },
-    "Layer": 0.5,
+    "Layer": 0.9,
     "Pivot": "0.5, 0.5",
     "Effects": 0
   },
@@ -29,9 +29,9 @@
     "Effects": 0
   },
   "BoundingBox": {
-    "Min": "-50, -50, 0",
-    "Max": "50, 50, 0"
+    "Min": "-20, -20, 0",
+    "Max": "20, 20, 0"
   },
-  "DamageTarget": null,
-  "ActivationTime": 0.0
+  "DamageTarget": "BurstSeam",
+  "ActivationTime": 2.0
 }

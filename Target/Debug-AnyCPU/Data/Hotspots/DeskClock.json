@@ -1,6 +1,6 @@
 {
   "Transform": {
-    "Position": "-817.499939, 115.500008",
+    "Position": "-818.999939, 112.500008",
     "Scale": "0.5, 0.5",
     "Angle": 0.0
   },
@@ -31,5 +31,7 @@
   "BoundingBox": {
     "Min": "-70, -130, 0",
     "Max": "70, 130, 0"
-  }
+  },
+  "DamageTarget": null,
+  "ActivationTime": 0.0
 }
