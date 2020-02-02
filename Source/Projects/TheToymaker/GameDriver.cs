@@ -77,11 +77,13 @@ namespace TheToymaker
 
             if (State == GameState.WaitingForClient)
             {
+                Customer.State = Customer.StateType.Waiting;
                 GenerateNewCustomer.Perform(this, frameTime);
             }
 
             if (State == GameState.FixingToy)
             {
+                Customer.State = Customer.StateType.Waiting;
                 HandleHotspotInteraction.Perform(this);
                 ResolveCurrentToy.Perform(this);
                 HandlePaymentProcess.Paid = false;
@@ -90,11 +92,13 @@ namespace TheToymaker
 
             if (State == GameState.ClientPayment)
             {
+                Customer.State = Customer.StateType.Happy;
                 HandlePaymentProcess.Perform(this, frameTime);
             }
 
             if (State == GameState.ClientLeaving)
             {
+                Customer.State = Customer.StateType.Waiting;
                 GameInterface.SpeechSprite.Tint = new Color(GameInterface.SpeechSprite.Tint, 0.0f);
                 GenerateNewCustomer.WaitTime = GetRandom.Float(1.0f, 2.0f);
                 ChangeState(GameState.WaitingForClient);
@@ -135,6 +139,14 @@ namespace TheToymaker
             SpriteBatch.DrawSprite(Clock.MinuteHandTransform, Clock.MinuteHandSprite);
             SpriteBatch.DrawSprite(SewingKit.Transform, SewingKit.Sprite);
             SpriteBatch.DrawSprite(PaintingKit.Transform, PaintingKit.Sprite);
+
+            switch (Customer.State)
+            {
+                case Customer.StateType.Happy:
+                    GameInterface.SpeechIcon.ImageId = "HappyFace";
+                    SpriteBatch.DrawSprite(GameInterface.SpeechLocation, GameInterface.SpeechIcon);
+                    break;
+            }
 
             if (Phone.State == PhoneMachine.StateType.Talking)
                 SpriteBatch.DrawSprite(GameInterface.PhoneSpeechLocation, GameInterface.SpeechSprite);

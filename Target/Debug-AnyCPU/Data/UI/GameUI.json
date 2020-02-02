@@ -23,6 +23,30 @@
     "Pivot": "0.5, 0.5",
     "Effects": 0
   },
+  "PhoneIcon": {
+    "ImageId": "",
+    "Tint": {
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 190
+    },
+    "Layer": 0.85,
+    "Pivot": "0.5, 0.5",
+    "Effects": 0
+  },
+  "SpeechIcon": {
+    "ImageId": "",
+    "Tint": {
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 190
+    },
+    "Layer": 0.85,
+    "Pivot": "0.5, 0.75",
+    "Effects": 0
+  },
   "Square": {
     "ImageId": "Square",
     "Tint": {

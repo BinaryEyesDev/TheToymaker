@@ -10,6 +10,8 @@ namespace TheToymaker.Entities
     {
         public Sprite TableSprite;
         public Sprite SpeechSprite;
+        public Sprite PhoneIcon;
+        public Sprite SpeechIcon;
         public Transform2D TableTransform;
         
         public Sprite Square;
